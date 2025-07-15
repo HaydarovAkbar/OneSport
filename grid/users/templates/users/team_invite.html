@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Team Invitation</h2>
+        <p>Hello,</p>
+        <p>{{ inviter_name }} has invited you to join {{ company_name }} as a {{ user_type }}.</p>
+        
+        <a href="{{ invite_link }}" class="button">Accept Invitation</a>
+        
+        <p>If you didn't expect this invitation, you can safely ignore this email.</p>
+        
+        <p>Best regards,<br>
+        {{ company_name }} Team</p>
+    </div>
+</body>
+</html>

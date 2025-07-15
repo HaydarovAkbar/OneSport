@@ -1,0 +1,433 @@
+Subroles
+
+***Admin***
+Superadmin
+Admin
+Editor
+Viewer
+Accountant
+
+***Recruiter***
+Superadmin
+Member
+
+***Client_User***
+Superadmin
+Admin
+Member
+
+
+-----------------
+
+Benefits		Get Only. Anyone who is logged in. Admin will edit in Django Admin
+CancelReason	Get. Has to be ClientUser or Admin. Admin will edit in Django Admin
+CompanySize		Get. Has to be ClientUser or Admin. Admin will edit in Django Admin
+Country      	Get Only. Anyone who is logged in.  Admin will edit in Django Admin
+State	    	Get Only. Anyone who is logged in. Admin will edit in Django Admin
+Industry		Get Only. Anyone who is logged in.  Admin will edit in Django Admin
+JobCategory		Get Only. Anyone who is logged in.  Admin will edit in Django Admin
+Language		Get Only. Anyone who is logged in.  Admin will edit in Django Admin
+Skill		    Get Only. Must be Admin (All sub roles).  Admin will edit in Django Admin
+Stage		    Get Only. Anyone who is logged in.  Admin will edit in Django Admin
+StageLog		Get Only. Must be Admin (All sub roles).  System will create enteries in the background.
+Currency		Get Only. Anyone who is logged in. Admin will edit in Django Admin
+
+
+
+
+*BankAccount*  (Owner is Agency - foreign key in Agency)
+-View
+Admin (Superadmin)
+Admin (Admin)
+Admin (Accountant)
+Recruiter (Superadmin) should belong to the "Owner Agency"
+
+
+-Edit/Update
+Admin (Superadmin)
+Recruiter (Superadmin) should belong to the "Owner Agency"
+
+
+-Create
+Admin (Superadmin)
+Admin (Admin)
+Recruiter (Superadmin) will be created for the recruiter's Agency
+
+-Delete
+Cannot be deleted
+
+-----------------
+
+*InterviewStep* (belongs to job)
+Inherit from job - defined under job
+
+-----------------
+
+*JobAttachment*
+Inherit from job - defined under job
+
+-----------------
+
+*MessageAttachment*
+Inherit from Message - defined under Message
+
+------------------
+
+*TaxInformation* (Owner is Agency - foreign key in Agency)
+
+-View
+Admin (Superadmin)
+Admin (Accountant)
+Recruiter (Superadmin) should belong to the "Owner Agency"
+
+
+-Edit/Update
+Admin (Superadmin)
+Recruiter (Superadmin) should belong to the "Owner Agency"
+
+
+-Create
+Admin (Superadmin)
+Admin (Admin)
+Recruiter (Superadmin) -- will be created with the recruiter's Agency as owner
+
+-Delete
+Cannot be deleted
+
+
+----------------------
+
+*Recruiter*
+
+-View
+Admin (All roles)
+Recruiter - Owner only (Don't show - stripe_id)
+
+-Create
+Will only be create by Create account API along with Agency model
+
+
+-Edit
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Recruiter - Owner only (cannot edit RecruiterStatus, primary industry, secondary industry, commission_share, agency, stripe_id, superuser and core fields(uuid, created_at etc.)). In Address, cannot edit Country and State.
+
+
+-Delete
+Noone can delete
+
+NOTES : Recruiter has - Recruiter Application - Candidiates - Hires - Recruiter Payments
+We will need - Candidates.count - candidates-where-stage-was-or-is-interview (count) - hires (count)
+suggestion - add a field in candidates - interviewed - boolean in candidiates. When a candidiate stage is changed to interview, the flag turns True. This way we can get interviews.count from the same table.
+
+
+-------------------------
+
+*Agency*
+
+-View
+Admin (All roles)
+Recruiter (All Roles) - All recruiters who have the same Agency (Agency recruiters).
+Do not show is_individual - Show make payable to, linkedin, bank account and Tax info to only recruiter_superadmin
+
+
+-Create
+Will only be create by Create account API
+
+
+-Edit
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Recruiter (Superadmin).  Recruiter who have the same Agency. Cannot edit is_individual.
+
+
+-Delete
+Noone can delete
+
+
+-----------------
+
+Recruiter Payments
+
+-View
+Admin (Superadmin)
+Admin (Accountant)
+Recruiter - Superadmin recruiter who have the same Agency (Agency recruiters) and the owner.
+
+
+-Edit
+Admin (Superadmin)
+
+
+Delete
+Noone can delete
+
+
+---------------------
+
+*Client*
+-View
+Admin (All roles)
+Client_Users (All Roles). Do not show linkedin_company_size, stripe id, status
+
+-Edit/update
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Client_Users (SuperAdmin and Admin) - Can edit company details except status and stripe_id
+
+
+Delete
+Noone can delete
+
+
+Client has - Recruiter Applications - Jobs - Invoices - Payment Methods
+
+--------------------------
+
+*Client-user-profile*
+
+-View
+Admin (All roles)
+Client User - All Roles
+
+
+-Create
+Will only be created by Create account API along with Agency model
+
+
+-Edit
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Client User - Owner only (cannot edit core fields(uuid, created_at etc.) stripe_id).
+
+-Delete
+Noone can delete
+
+
+----------------------------
+
+*Candidate*
+
+- View
+Admin (All)
+Recruiter - Owner
+Clinet User (all roles) - belongs to Client who own the related Job
+
+-Create
+Recruiter (All Roles) - who is approved for the job for which Candidate is created
+
+- Edit
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Recruiter - Owner - all fields except core fields - Cannot change stage, is_interviewed
+Client User (all roles) - belongs to Client who own the related Job,. Can only change stage unless the candidate is in Hired stage.
+
+
+- Delete
+Noone Can delete
+
+
+------------------------------
+
+Job
+
+
+View - list
+Admin (All except Viewer)
+Admin Viewer (Limit the list to 3. Only when searched. No List without search)
+Recruiter - All jobs from their State or Country depending on the settings. For the jobs where the recruiter has application.
+Client User - only jobs that are owned by the Client, the User belongs to
+
+View - Detail
+Admin (All)
+Recruiter - All jobs from their State or Country depending on the settings
+Client User - only jobs that are owned by the Client who the User belongs to
+
+
+Edit / Update / Patch
+Admin (Superadmin)
+Admin (Admin)
+Admin (Editor)
+Recruiter - NO
+Client User - only jobs that are owned by the Client, the User belongs to. Client can only add files. Edit interview steps. Add notes. Add Benefits. Cannot make any other change.
+
+
+Create
+Client through the form.
+
+- Delete
+Noone Can delete
+
+
+
+------------------------------------
+
+Hires
+
+- View - list
+Admin (All)
+Admin Viewer (Limit the list to 3. Only when searched. Get all Hires of a job when job id is provided)
+Recruiter - For the job where the recruiter has application for the job and is approved. If the recruiter is superuser, can see hires by all recruiters that blong to their agency.
+Client User - only hires for the jobs that are owned by the Client, the User belongs to
+
+
+- View - Detail
+Admin (All)
+Recruiter - For the job where the recruiter has application for the job and is approved. If the recruiter is superuser, can see hires by all recruiters that blong to their agency.
+Client User - only jobs that are owned by the Client who the User belongs to
+
+
+- Edit / Update / Patch
+Admin (Superadmin, Admin, Editor) - Can only edit status
+
+Create
+None
+
+Delete
+None
+
+
+-------------------------------------
+
+
+Recruiter Payments
+
+- View list and details
+Admin (All except Viewer)
+Admin Viewer - only see 3 through search - See details of every hire.
+Recruiter - inherit form Hire
+Client - None
+
+- Edit
+Admin (Superadmin, Admin, Editor) - Can only edit status, date, and amount
+
+- Create
+Admin (Superadmin, Admin, Editor)
+
+- Delete
+None
+
+
+-----------------------------------------
+
+Stage
+
+-View
+inherit from Job
+
+- Edit
+Admin (Superadmin, Admin, Editor)
+ClientUser - if they blong to the Client who owns the job that has that candidiate. When stage is cahnged to interview, candidate's is_interviewed will become True. If the stage is hired, no change in stage is allowed.
+Recruiter - None
+
+
+- cteate and delete Not Applicable
+
+
+------------------------------------------
+
+
+RecruiterApplication
+
+-View List/ Detail
+Admin (All)
+Recruiter - Where recruiter is owner
+Client - Where client is owner
+
+-Edit
+Admin (All) can only edit status
+Recruiter - None
+ClientUser - Can edit status of the applications where related client is owner
+
+
+- Create
+Admin (All)
+Recruiter
+
+
+-Delete
+Noone
+
+
+-------------------------------------------
+
+
+Address
+
+-View
+Admin All
+inherit from parent resource.
+
+
+
+-Edit
+Admin (Superadmin, Admin, Editor)
+Recruiter - Can only edit their own - cannot edit state and country
+ClientUser - Can only edit address of related Client - cannot edit country
+
+
+-Create
+Admin (Superadmin, Admin, Editor)
+Recruiter - Can create during signup only
+ClientUser - Can create addresses - must be in their country.
+
+
+-Delete
+Admin (Superadmin, Admin, Editor). can only delete when parent resource is deleted
+Recruiter - Cannot delete
+Client User - Can delete address associated with related Client - cannot delete last address of the client
+
+
+------------------------------------
+
+
+
+Message
+
+May be need a conversation model
+
+-View
+ClinetUser - can view all messages where the related client is owner of the job that owns the message
+Recruiter - can view all messages where recruiter is owner
+
+- Edit
+Admin (Superadmin, Admin, Editor)
+ClinetUser - Owner - only within 5 minutes of the message create date
+Recruiter - Owner - only within 5 minutes of the message create date
+
+
+- Create
+Admin (Superadmin, Admin, Editor)
+ClinetUser - Only for the job related to the related Client
+Recruiter - Only for the job where their application is approved
+
+- Delete
+Admin (Superadmin, Admin, Editor)
+ClinetUser - Owner - only within 5 minutes of the message create date
+Recruiter - Owner - only within 5 minutes of the message create date
+
+
+------------------------------------------------
+
+Invoice
+
+-List / Retrieve
+Admin (SuperAdmin, Admin, Accountant)
+ClientUser (only invoice where the clinet is related to the client. The client must be Superuser or Admin)
+Recruiter - No
+
+-Update
+Admin (SuperAdmin, Admin)
+ClientUser - No
+Recruiter - No
+
+
+-Create
+Admin (SuperAdmin, Admin, Accountant)
+ClientUser - No
+Recruiter - No

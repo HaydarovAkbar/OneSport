@@ -1,0 +1,2226 @@
+[
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "31bfbb4f-15a4-4af6-8a47-5a08ec11c554",
+    "fields": {
+      "created_at": "2024-11-04T04:03:59.592Z",
+      "updated_at": "2024-11-04T04:03:59.592Z",
+      "is_active": true,
+      "hires": 1,
+      "percentage": 50,
+      "default": false
+    }
+  },
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "48bcd738-491e-4992-9d65-7087f250681a",
+    "fields": {
+      "created_at": "2024-11-04T04:03:49.938Z",
+      "updated_at": "2024-11-04T04:03:49.938Z",
+      "is_active": true,
+      "hires": 0,
+      "percentage": 50,
+      "default": false
+    }
+  },
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "5fd27ae1-4416-4fc1-8003-9272c30d9777",
+    "fields": {
+      "created_at": "2024-11-04T04:04:55.230Z",
+      "updated_at": "2024-11-04T04:04:55.230Z",
+      "is_active": true,
+      "hires": 5,
+      "percentage": 80,
+      "default": true
+    }
+  },
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "9539f620-0b44-4d76-8deb-7e5da5ea3586",
+    "fields": {
+      "created_at": "2024-11-04T04:04:12.762Z",
+      "updated_at": "2024-11-04T04:04:12.762Z",
+      "is_active": true,
+      "hires": 2,
+      "percentage": 70,
+      "default": false
+    }
+  },
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "e55e6dd9-6e17-454f-abe8-15beb350c41a",
+    "fields": {
+      "created_at": "2024-11-04T04:04:29.317Z",
+      "updated_at": "2024-11-04T04:04:29.317Z",
+      "is_active": true,
+      "hires": 4,
+      "percentage": 70,
+      "default": false
+    }
+  },
+  {
+    "model": "site_settings.recruitershare",
+    "pk": "ffaaffb3-6651-43d2-b48a-6d389d62ac2e",
+    "fields": {
+      "created_at": "2024-11-04T04:04:20.596Z",
+      "updated_at": "2024-11-04T04:04:20.596Z",
+      "is_active": true,
+      "hires": 3,
+      "percentage": 70,
+      "default": false
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "101b9ff5-77fb-439e-a5dc-925601f1ea09",
+    "fields": {
+      "created_at": "2024-11-04T18:57:35.278Z",
+      "updated_at": "2024-11-04T19:00:52.891Z",
+      "is_active": true,
+      "name": "20,000+",
+      "priority": 7
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "11df63da-38c3-42d8-8bce-3879bf61829d",
+    "fields": {
+      "created_at": "2024-11-04T18:51:31.249Z",
+      "updated_at": "2024-11-04T18:56:53.873Z",
+      "is_active": true,
+      "name": "51 to 200",
+      "priority": 3
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "448ebe8f-09f3-45ce-b587-f0661e8c4f2b",
+    "fields": {
+      "created_at": "2024-11-04T18:58:20.622Z",
+      "updated_at": "2024-11-04T18:58:53.218Z",
+      "is_active": true,
+      "name": "6 to 10",
+      "priority": 1
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "abd01163-882e-4d35-b86b-01ab85e900fb",
+    "fields": {
+      "created_at": "2024-11-04T18:51:51.322Z",
+      "updated_at": "2024-11-04T18:59:48.310Z",
+      "is_active": true,
+      "name": "1,001 to 5,000",
+      "priority": 5
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "b273bdb5-e12b-4c5e-9778-9e1b2512fa41",
+    "fields": {
+      "created_at": "2024-11-04T18:51:17.647Z",
+      "updated_at": "2024-11-04T18:58:28.152Z",
+      "is_active": true,
+      "name": "11 to 50",
+      "priority": 2
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "c2f69efc-377b-4e3d-b8bc-cc539cfa5c82",
+    "fields": {
+      "created_at": "2024-11-04T18:51:40.483Z",
+      "updated_at": "2024-11-04T19:00:06.912Z",
+      "is_active": true,
+      "name": "200 to 1,000",
+      "priority": 4
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "db4a7c09-d739-49b3-a952-e697a3a2c436",
+    "fields": {
+      "created_at": "2024-11-04T18:51:09.304Z",
+      "updated_at": "2024-11-04T18:58:53.220Z",
+      "is_active": true,
+      "name": "1 to 5",
+      "priority": 0
+    }
+  },
+  {
+    "model": "site_settings.companysize",
+    "pk": "deb4755f-13ee-4936-8ead-58bf3f92be39",
+    "fields": {
+      "created_at": "2024-11-04T18:59:24.026Z",
+      "updated_at": "2024-11-04T19:00:52.892Z",
+      "is_active": true,
+      "name": "5,000 to 20,000",
+      "priority": 6
+    }
+  },
+  {
+    "model": "site_settings.commissionlevel",
+    "pk": "23d5e3ac-2f7f-4985-ae8b-f6664a4b77e7",
+    "fields": {
+      "created_at": "2024-11-04T04:09:24.994Z",
+      "updated_at": "2024-11-04T04:09:24.994Z",
+      "is_active": true,
+      "min_commission": 20,
+      "max_commission": 24,
+      "message": "This is standard industry commission and expert recruiters would do their best to find your talent.",
+      "title": "RECOMMENDED",
+      "message2": ""
+    }
+  },
+  {
+    "model": "site_settings.commissionlevel",
+    "pk": "41eeca03-e048-4e89-ace1-8a34e84a1541",
+    "fields": {
+      "created_at": "2024-11-04T04:08:17.860Z",
+      "updated_at": "2024-11-04T04:08:17.860Z",
+      "is_active": true,
+      "min_commission": 15,
+      "max_commission": 19,
+      "message": "This is lower than industry standard but can be appropriate for easy searches.",
+      "title": "OK",
+      "message2": ""
+    }
+  },
+  {
+    "model": "site_settings.commissionlevel",
+    "pk": "5f00e031-8b7e-47fb-818b-9fa5a6892b1c",
+    "fields": {
+      "created_at": "2024-11-04T04:11:25.592Z",
+      "updated_at": "2024-11-04T04:11:25.592Z",
+      "is_active": true,
+      "min_commission": 25,
+      "max_commission": 30,
+      "message": "Top recruiters will work on your job. Recruiters will go extra mile to make things happen. You will be assigned internal recruiter of HireGrid in addition to other recruiters to make sure you find your person.",
+      "title": "GREAT COMMISSION",
+      "message2": ""
+    }
+  },
+  {
+    "model": "site_settings.commissionlevel",
+    "pk": "65b52767-9aef-46c5-9ef5-5435fb93c3f9",
+    "fields": {
+      "created_at": "2024-11-04T04:35:32.900Z",
+      "updated_at": "2024-11-04T04:35:32.900Z",
+      "is_active": true,
+      "min_commission": 31,
+      "max_commission": 40,
+      "message": "Appropriate extremely hard to find roles. Legal and Financial recruiters generally charge in this range. Recruiters will go out of their way to find you this person.",
+      "title": "AMAZING REWARD",
+      "message2": ""
+    }
+  },
+  {
+    "model": "site_settings.commissionlevel",
+    "pk": "fcc9b499-1b76-48e6-91af-a8ffc5c39606",
+    "fields": {
+      "created_at": "2024-11-04T04:07:16.888Z",
+      "updated_at": "2024-11-04T04:07:16.888Z",
+      "is_active": true,
+      "min_commission": 12,
+      "max_commission": 14,
+      "message": "Not many recruiters will be interested",
+      "title": "TOO LOW",
+      "message2": ""
+    }
+  },
+  {
+    "model": "site_settings.payoutinstalment",
+    "pk": "0e33215a-2b48-487e-a19f-8f618ae88cec",
+    "fields": {
+      "created_at": "2024-11-04T04:02:17.050Z",
+      "updated_at": "2024-11-04T04:02:17.050Z",
+      "is_active": true,
+      "name": "First Installment",
+      "percentage": 33,
+      "interval_in_days": 30
+    }
+  },
+  {
+    "model": "site_settings.payoutinstalment",
+    "pk": "83adcae3-4e9b-40c6-9e1b-8da9f51b2a70",
+    "fields": {
+      "created_at": "2024-11-04T04:03:19.713Z",
+      "updated_at": "2024-11-04T04:03:19.713Z",
+      "is_active": true,
+      "name": "Third Installment",
+      "percentage": 34,
+      "interval_in_days": 90
+    }
+  },
+  {
+    "model": "site_settings.payoutinstalment",
+    "pk": "f6186e83-b4d1-4379-bc5b-38c904ac8f3d",
+    "fields": {
+      "created_at": "2024-11-04T04:03:03.883Z",
+      "updated_at": "2024-11-04T04:03:28.988Z",
+      "is_active": true,
+      "name": "Second Installment",
+      "percentage": 33,
+      "interval_in_days": 60
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "150e8b10-7f90-45e0-b5ba-1e4851593752",
+    "fields": {
+      "created_at": "2024-11-03T07:31:53.803Z",
+      "updated_at": "2024-11-03T07:31:53.803Z",
+      "is_active": true,
+      "name": "Canadian Dollar",
+      "three_letter_code": "CAD",
+      "symbol": "$",
+      "job_posting_fee": 250.0,
+      "extra_role_fee": 50.0,
+      "top_job_fee": 250.0,
+      "salary_min": 40000.0,
+      "commission_min": 10000.0,
+      "financial_min": 25000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "2a1560be-83e6-4318-a46f-2882cf42223c",
+    "fields": {
+      "created_at": "2024-11-03T07:36:27.280Z",
+      "updated_at": "2024-11-03T07:36:27.280Z",
+      "is_active": true,
+      "name": "New Zealand Dollar",
+      "three_letter_code": "NZD",
+      "symbol": "NZ$",
+      "job_posting_fee": 300.0,
+      "extra_role_fee": 100.0,
+      "top_job_fee": 250.0,
+      "salary_min": 40000.0,
+      "commission_min": 10000.0,
+      "financial_min": 20000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "2fa649b6-54ff-421b-a54f-699a7714be05",
+    "fields": {
+      "created_at": "2024-11-03T07:34:44.436Z",
+      "updated_at": "2024-11-03T07:34:44.436Z",
+      "is_active": true,
+      "name": "Australian Dollar",
+      "three_letter_code": "AUD",
+      "symbol": "$",
+      "job_posting_fee": 250.0,
+      "extra_role_fee": 50.0,
+      "top_job_fee": 300.0,
+      "salary_min": 40000.0,
+      "commission_min": 8000.0,
+      "financial_min": 20000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "7a97c885-862e-4d8d-bd58-aa3b9d184121",
+    "fields": {
+      "created_at": "2024-11-03T07:33:47.829Z",
+      "updated_at": "2024-11-03T07:33:47.829Z",
+      "is_active": true,
+      "name": "Pound Sterling",
+      "three_letter_code": "GBP",
+      "symbol": "£",
+      "job_posting_fee": 200.0,
+      "extra_role_fee": 50.0,
+      "top_job_fee": 250.0,
+      "salary_min": 25000.0,
+      "commission_min": 7000.0,
+      "financial_min": 15000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "9133f0a2-7211-45fd-b1ea-d1d0979b7770",
+    "fields": {
+      "created_at": "2024-11-03T07:30:13.428Z",
+      "updated_at": "2024-11-03T07:30:13.428Z",
+      "is_active": true,
+      "name": "US Dollars",
+      "three_letter_code": "USD",
+      "symbol": "$",
+      "job_posting_fee": 200.0,
+      "extra_role_fee": 50.0,
+      "top_job_fee": 250.0,
+      "salary_min": 35000.0,
+      "commission_min": 8000.0,
+      "financial_min": 20000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.currency",
+    "pk": "d6ccb8a5-fa44-4e07-8cb4-3c50dbd3bb35",
+    "fields": {
+      "created_at": "2024-11-03T07:38:18.530Z",
+      "updated_at": "2024-11-03T07:38:18.530Z",
+      "is_active": true,
+      "name": "Euro",
+      "three_letter_code": "EUR",
+      "symbol": "€",
+      "job_posting_fee": 200.0,
+      "extra_role_fee": 50.0,
+      "top_job_fee": 250.0,
+      "salary_min": 30000.0,
+      "commission_min": 10000.0,
+      "financial_min": 20000.0,
+      "future_fee1": null,
+      "future_fee2": null
+    }
+  },
+  {
+    "model": "site_settings.country",
+    "pk": "17748fed-91a2-4cf5-945d-b9046bd2a491",
+    "fields": {
+      "created_at": "2024-11-03T07:43:51.321Z",
+      "updated_at": "2024-11-03T07:43:51.321Z",
+      "is_active": true,
+      "name": "New Zealand",
+      "two_letter_code": "NZ",
+      "three_letter_code": "NZL",
+      "icon_name": null,
+      "currency": "2a1560be-83e6-4318-a46f-2882cf42223c",
+      "priority": 10
+    }
+  },
+  {
+    "model": "site_settings.country",
+    "pk": "180f7a11-1043-49e7-8076-3036660100ec",
+    "fields": {
+      "created_at": "2024-11-03T07:42:38.843Z",
+      "updated_at": "2024-11-03T07:42:38.844Z",
+      "is_active": true,
+      "name": "Australia",
+      "two_letter_code": "AU",
+      "three_letter_code": "AUS",
+      "icon_name": null,
+      "currency": "2fa649b6-54ff-421b-a54f-699a7714be05",
+      "priority": 10
+    }
+  },
+  {
+    "model": "site_settings.country",
+    "pk": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3",
+    "fields": {
+      "created_at": "2024-11-03T07:40:52.595Z",
+      "updated_at": "2024-11-03T07:40:52.595Z",
+      "is_active": true,
+      "name": "Canada",
+      "two_letter_code": "CA",
+      "three_letter_code": "CAN",
+      "icon_name": null,
+      "currency": "150e8b10-7f90-45e0-b5ba-1e4851593752",
+      "priority": 10
+    }
+  },
+  {
+    "model": "site_settings.country",
+    "pk": "859813c7-ba05-4ff7-a26e-11e4a63bcb90",
+    "fields": {
+      "created_at": "2024-11-03T07:41:54.289Z",
+      "updated_at": "2024-11-03T07:41:54.289Z",
+      "is_active": true,
+      "name": "United Kingdom",
+      "two_letter_code": "UK",
+      "three_letter_code": "GBR",
+      "icon_name": null,
+      "currency": "7a97c885-862e-4d8d-bd58-aa3b9d184121",
+      "priority": 10
+    }
+  },
+  {
+    "model": "site_settings.country",
+    "pk": "db538637-77e1-4520-b773-5b4906411f2f",
+    "fields": {
+      "created_at": "2024-11-03T07:40:33.146Z",
+      "updated_at": "2024-11-03T07:40:33.146Z",
+      "is_active": true,
+      "name": "United States",
+      "two_letter_code": "US",
+      "three_letter_code": "USA",
+      "icon_name": null,
+      "currency": "9133f0a2-7211-45fd-b1ea-d1d0979b7770",
+      "priority": 10
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "0152e9e2-4bbc-4e16-be5c-a5fb6938af67",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.834Z",
+      "updated_at": "2024-11-04T02:45:06.834Z",
+      "is_active": true,
+      "name": "Tasman",
+      "two_letter_code": "TAS",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "02e4d6a7-ac3b-444c-b69a-af0025967fbc",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.833Z",
+      "updated_at": "2024-11-04T02:45:06.833Z",
+      "is_active": true,
+      "name": "Wellington",
+      "two_letter_code": "WGN",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "02f76ec6-b5b1-42b5-a0c8-bc92f83fa747",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.815Z",
+      "updated_at": "2024-11-04T02:45:06.815Z",
+      "is_active": true,
+      "name": "British Columbia",
+      "two_letter_code": "BC",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "036acdc4-05d0-4d46-beb0-daa656659cf7",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.821Z",
+      "updated_at": "2024-11-04T02:45:06.821Z",
+      "is_active": true,
+      "name": "Yukon",
+      "two_letter_code": "YT",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "06b60c19-1783-4259-971d-34fb7a6b0ec0",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.823Z",
+      "updated_at": "2024-11-04T02:45:06.823Z",
+      "is_active": true,
+      "name": "Northern Ireland",
+      "two_letter_code": "NI",
+      "country": "859813c7-ba05-4ff7-a26e-11e4a63bcb90"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "084c09b3-5af5-4c09-b053-e730a0e8992c",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.809Z",
+      "updated_at": "2024-11-04T02:45:06.809Z",
+      "is_active": true,
+      "name": "Tennessee",
+      "two_letter_code": "TN",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "097c44dc-cf61-42a2-b0ae-46eb3e083ba9",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.802Z",
+      "updated_at": "2024-11-04T02:45:06.802Z",
+      "is_active": true,
+      "name": "New Hampshire",
+      "two_letter_code": "NH",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "0f32a85f-59b3-4506-8f6a-af8c610c69d2",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.828Z",
+      "updated_at": "2024-11-04T02:45:06.828Z",
+      "is_active": true,
+      "name": "Australian Capital Territory",
+      "two_letter_code": "ACT",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "100b743f-42b8-4bb9-bc4b-05d8b5445bfc",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.831Z",
+      "updated_at": "2024-11-04T02:45:06.831Z",
+      "is_active": true,
+      "name": "Gisborne",
+      "two_letter_code": "GIS",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "129f0959-1b70-4f6d-8ad5-c2cd606929c5",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.829Z",
+      "updated_at": "2024-11-04T02:45:06.829Z",
+      "is_active": true,
+      "name": "Auckland",
+      "two_letter_code": "AKL",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "1ab0268e-8259-4a47-80bd-60d25078a812",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.792Z",
+      "updated_at": "2024-11-04T02:45:06.792Z",
+      "is_active": true,
+      "name": "Illinois",
+      "two_letter_code": "IL",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "1af4ab2e-b446-4447-8403-246cf9aeebe6",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.819Z",
+      "updated_at": "2024-11-04T02:45:06.819Z",
+      "is_active": true,
+      "name": "Prince Edward Island",
+      "two_letter_code": "PE",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "201058f7-0351-45fa-8a51-154733964a37",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.835Z",
+      "updated_at": "2024-11-04T02:45:06.835Z",
+      "is_active": true,
+      "name": "Marlborough",
+      "two_letter_code": "MRL",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "25a46b16-b89c-47c6-8017-daa279b216f6",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.826Z",
+      "updated_at": "2024-11-04T02:45:06.826Z",
+      "is_active": true,
+      "name": "Western Australia",
+      "two_letter_code": "WA",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "276d3e2a-a839-4dd7-844f-835bc4a951ae",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.809Z",
+      "updated_at": "2024-11-04T02:45:06.809Z",
+      "is_active": true,
+      "name": "South Dakota",
+      "two_letter_code": "SD",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "2792859b-a022-4fb8-a09e-8e567d2b91eb",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.790Z",
+      "updated_at": "2024-11-04T02:45:06.791Z",
+      "is_active": true,
+      "name": "Georgia",
+      "two_letter_code": "GA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "2befa732-a8b3-4496-9a93-7faf70bd8313",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.818Z",
+      "updated_at": "2024-11-04T02:45:06.818Z",
+      "is_active": true,
+      "name": "Nunavut",
+      "two_letter_code": "NU",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "2e904c1b-efb7-40a3-b8fc-ad69b4070339",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.803Z",
+      "updated_at": "2024-11-04T02:45:06.803Z",
+      "is_active": true,
+      "name": "New Mexico",
+      "two_letter_code": "NM",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "2f787e61-4ff3-4306-b568-104da0061847",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.830Z",
+      "updated_at": "2024-11-04T02:45:06.830Z",
+      "is_active": true,
+      "name": "Bay of Plenty",
+      "two_letter_code": "BOP",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "2fab25e4-c821-4039-86b9-ab895cb2287b",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.811Z",
+      "updated_at": "2024-11-04T02:45:06.811Z",
+      "is_active": true,
+      "name": "Virginia",
+      "two_letter_code": "VA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "30082ed0-909f-465c-b067-3d0da8a89c59",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.808Z",
+      "updated_at": "2024-11-04T02:45:06.808Z",
+      "is_active": true,
+      "name": "South Carolina",
+      "two_letter_code": "SC",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "305af13e-1835-4369-a833-aa3aedea7e93",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.804Z",
+      "updated_at": "2024-11-04T02:45:06.804Z",
+      "is_active": true,
+      "name": "North Carolina",
+      "two_letter_code": "NC",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "318e9c05-3699-4669-ac1c-40abd6b77566",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.813Z",
+      "updated_at": "2024-11-04T02:45:06.813Z",
+      "is_active": true,
+      "name": "Wisconsin",
+      "two_letter_code": "WI",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "385fe46f-0248-440b-8a9e-c9149c213165",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.834Z",
+      "updated_at": "2024-11-04T02:45:06.834Z",
+      "is_active": true,
+      "name": "Nelson",
+      "two_letter_code": "NSN",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "3dc47feb-125a-4daf-989c-32c5ebf7d0ae",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.797Z",
+      "updated_at": "2024-11-04T02:45:06.797Z",
+      "is_active": true,
+      "name": "Maryland",
+      "two_letter_code": "MD",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "3ea21697-7593-432a-93b5-8fcc762de87d",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.822Z",
+      "updated_at": "2024-11-04T02:45:06.822Z",
+      "is_active": true,
+      "name": "Scotland",
+      "two_letter_code": "SCT",
+      "country": "859813c7-ba05-4ff7-a26e-11e4a63bcb90"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "3f63dc21-7440-4257-bf90-c12c2cfdb83c",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.807Z",
+      "updated_at": "2024-11-04T02:45:06.807Z",
+      "is_active": true,
+      "name": "Rhode Island",
+      "two_letter_code": "RI",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "4100a6d0-94ba-488b-8a1b-9f187d72bf22",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.804Z",
+      "updated_at": "2024-11-04T02:45:06.804Z",
+      "is_active": true,
+      "name": "New York",
+      "two_letter_code": "NY",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "41da80d0-c8bc-437a-900a-184eaea188c1",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.789Z",
+      "updated_at": "2024-11-04T02:45:06.789Z",
+      "is_active": true,
+      "name": "Delaware",
+      "two_letter_code": "DE",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "42b57743-50d8-46e1-9c41-aa3833f0b349",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.807Z",
+      "updated_at": "2024-11-04T02:45:06.807Z",
+      "is_active": true,
+      "name": "Pennsylvania",
+      "two_letter_code": "PA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "4a7685d2-c4eb-4ad4-a4bd-89baf0cc026d",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.824Z",
+      "updated_at": "2024-11-04T02:45:06.824Z",
+      "is_active": true,
+      "name": "New South Wales",
+      "two_letter_code": "NSW",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "56f497dd-e0fa-4817-9b55-ed2b61ca470a",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.814Z",
+      "updated_at": "2024-11-04T02:45:06.814Z",
+      "is_active": true,
+      "name": "Wyoming",
+      "two_letter_code": "WY",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "5b2d2908-f228-43c7-9020-0a57393eb357",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.796Z",
+      "updated_at": "2024-11-04T02:45:06.796Z",
+      "is_active": true,
+      "name": "Louisiana",
+      "two_letter_code": "LA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "5ddb1852-034f-4820-939e-4df11c1ecad9",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.786Z",
+      "updated_at": "2024-11-04T02:45:06.786Z",
+      "is_active": true,
+      "name": "Alaska",
+      "two_letter_code": "AK",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "618f278e-ce31-4dcc-81e5-b6979bd1181c",
+    "fields": {
+      "created_at": "2024-11-03T07:45:05.052Z",
+      "updated_at": "2024-11-03T07:45:05.052Z",
+      "is_active": true,
+      "name": "New York",
+      "two_letter_code": "NY",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6463e79c-e95d-4664-97f8-92a06de38b5d",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.805Z",
+      "updated_at": "2024-11-04T02:45:06.805Z",
+      "is_active": true,
+      "name": "Ohio",
+      "two_letter_code": "OH",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6810165a-5bd2-49a9-9cf4-27407401238f",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.802Z",
+      "updated_at": "2024-11-04T02:45:06.802Z",
+      "is_active": true,
+      "name": "New Jersey",
+      "two_letter_code": "NJ",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6ad61839-4a9a-447d-8e99-743d608a5d28",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.819Z",
+      "updated_at": "2024-11-04T02:45:06.819Z",
+      "is_active": true,
+      "name": "Ontario",
+      "two_letter_code": "ON",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6af40daa-3c69-456c-995b-b4c1167e11d6",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.798Z",
+      "updated_at": "2024-11-04T02:45:06.798Z",
+      "is_active": true,
+      "name": "Minnesota",
+      "two_letter_code": "MN",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6b8f980d-6d3f-4794-862c-1500c25df888",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.823Z",
+      "updated_at": "2024-11-04T02:45:06.823Z",
+      "is_active": true,
+      "name": "Wales",
+      "two_letter_code": "WLS",
+      "country": "859813c7-ba05-4ff7-a26e-11e4a63bcb90"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "6d764fdb-0f61-4e6a-918d-0fa421282baf",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.797Z",
+      "updated_at": "2024-11-04T02:45:06.797Z",
+      "is_active": true,
+      "name": "Massachusetts",
+      "two_letter_code": "MA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "73bc09d1-406c-4642-81e8-13745ffc3888",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.790Z",
+      "updated_at": "2024-11-04T02:45:06.790Z",
+      "is_active": true,
+      "name": "Florida",
+      "two_letter_code": "FL",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "77f59f5a-d600-47bf-85c9-90b2d3b1326a",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.831Z",
+      "updated_at": "2024-11-04T02:45:06.831Z",
+      "is_active": true,
+      "name": "Hawke`s Bay",
+      "two_letter_code": "HKB",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "7df715e1-47ca-4e6d-8498-4f539fe503d4",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.833Z",
+      "updated_at": "2024-11-04T02:45:06.833Z",
+      "is_active": true,
+      "name": "Manawatū-Whanganui",
+      "two_letter_code": "MWT",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8001c492-ee5f-4d46-b7f2-8c0867459c85",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.835Z",
+      "updated_at": "2024-11-04T02:45:06.835Z",
+      "is_active": true,
+      "name": "West Coast",
+      "two_letter_code": "WTC",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "804b24e5-41a1-4021-b554-a52a3d5930d2",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.789Z",
+      "updated_at": "2024-11-04T02:45:06.789Z",
+      "is_active": true,
+      "name": "Connecticut",
+      "two_letter_code": "CT",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8281eab1-a7d6-457b-899d-53459173670f",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.832Z",
+      "updated_at": "2024-11-04T02:45:06.832Z",
+      "is_active": true,
+      "name": "Taranaki",
+      "two_letter_code": "TKI",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "82b659cc-85e5-4c7c-8048-2527b04464cc",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.795Z",
+      "updated_at": "2024-11-04T02:45:06.795Z",
+      "is_active": true,
+      "name": "Kentucky",
+      "two_letter_code": "KY",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "84cf8a5a-a119-4045-9284-e365d765b2ad",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.822Z",
+      "updated_at": "2024-11-04T02:45:06.822Z",
+      "is_active": true,
+      "name": "England",
+      "two_letter_code": "ENG",
+      "country": "859813c7-ba05-4ff7-a26e-11e4a63bcb90"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8d059522-7c82-4618-98a7-dab8e7e1f96f",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.825Z",
+      "updated_at": "2024-11-04T02:45:06.825Z",
+      "is_active": true,
+      "name": "Queensland",
+      "two_letter_code": "QLD",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8e2a2f3b-c340-4ddc-aa64-3e58e496e668",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.836Z",
+      "updated_at": "2024-11-04T02:45:06.836Z",
+      "is_active": true,
+      "name": "Canterbury",
+      "two_letter_code": "CAN",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8f157218-6810-45e9-af94-7ddb14480b57",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.828Z",
+      "updated_at": "2024-11-04T02:45:06.828Z",
+      "is_active": true,
+      "name": "Northern Territory",
+      "two_letter_code": "NT",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "8ffbb28a-2508-4121-a8df-3f9504346bdd",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.787Z",
+      "updated_at": "2024-11-04T02:45:06.787Z",
+      "is_active": true,
+      "name": "Arkansas",
+      "two_letter_code": "AR",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "95561c75-ce7c-4617-881c-b9da0b55ea00",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.818Z",
+      "updated_at": "2024-11-04T02:45:06.818Z",
+      "is_active": true,
+      "name": "Nova Scotia",
+      "two_letter_code": "NS",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "9e034076-8d5d-40bf-a15a-54bdffedad08",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.829Z",
+      "updated_at": "2024-11-04T02:45:06.829Z",
+      "is_active": true,
+      "name": "Northland",
+      "two_letter_code": "NLD",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "9ef5ae5a-df57-4078-97c4-cc61850d53bb",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.806Z",
+      "updated_at": "2024-11-04T02:45:06.806Z",
+      "is_active": true,
+      "name": "Oklahoma",
+      "two_letter_code": "OK",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "9f51d4b4-ab19-4b8c-a24d-a0b269b313bc",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.811Z",
+      "updated_at": "2024-11-04T02:45:06.811Z",
+      "is_active": true,
+      "name": "Vermont",
+      "two_letter_code": "VT",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "9fe3d122-c0db-4824-b370-dd2ecc2f38ac",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.816Z",
+      "updated_at": "2024-11-04T02:45:06.816Z",
+      "is_active": true,
+      "name": "Manitoba",
+      "two_letter_code": "MB",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a01a4394-56f1-4a8a-b7f2-959f405553c8",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.836Z",
+      "updated_at": "2024-11-04T02:45:06.836Z",
+      "is_active": true,
+      "name": "Otago",
+      "two_letter_code": "OTA",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a1176f92-26be-4189-8b51-a744ff908d03",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.788Z",
+      "updated_at": "2024-11-04T02:45:06.788Z",
+      "is_active": true,
+      "name": "Colorado",
+      "two_letter_code": "CO",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a33bb716-f362-4fec-83c5-b6b2a126c1b0",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.800Z",
+      "updated_at": "2024-11-04T02:45:06.800Z",
+      "is_active": true,
+      "name": "Montana",
+      "two_letter_code": "MT",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a341ea54-bacc-4373-a1e8-95ddb404dea1",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.801Z",
+      "updated_at": "2024-11-04T02:45:06.801Z",
+      "is_active": true,
+      "name": "Nevada",
+      "two_letter_code": "NV",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a37d23c5-4e59-4d26-8be0-4e477fa5f2e0",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.821Z",
+      "updated_at": "2024-11-04T02:45:06.821Z",
+      "is_active": true,
+      "name": "Saskatchewan",
+      "two_letter_code": "SK",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a66f8ef6-c700-42fd-9318-96dad4220edf",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.799Z",
+      "updated_at": "2024-11-04T02:45:06.799Z",
+      "is_active": true,
+      "name": "Mississippi",
+      "two_letter_code": "MS",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a868eea8-8a72-47a9-bd73-81d0073193da",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.820Z",
+      "updated_at": "2024-11-04T02:45:06.820Z",
+      "is_active": true,
+      "name": "Quebec",
+      "two_letter_code": "QC",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "a8bcb05a-149d-4d65-b1e7-2217a5b2961f",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.806Z",
+      "updated_at": "2024-11-04T02:45:06.806Z",
+      "is_active": true,
+      "name": "Oregon",
+      "two_letter_code": "OR",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "aab7aa35-b95c-4eba-8270-905902601919",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.791Z",
+      "updated_at": "2024-11-04T02:45:06.791Z",
+      "is_active": true,
+      "name": "Hawaii",
+      "two_letter_code": "HI",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "acd43f98-4d41-47ac-bcb2-e609671d09f2",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.795Z",
+      "updated_at": "2024-11-04T02:45:06.795Z",
+      "is_active": true,
+      "name": "Kansas",
+      "two_letter_code": "KS",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "af4e694a-d1ad-4c94-8db1-4a7abe52817a",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.817Z",
+      "updated_at": "2024-11-04T02:45:06.817Z",
+      "is_active": true,
+      "name": "Newfoundland and Labrador",
+      "two_letter_code": "NL",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "af5a7676-12c9-4d4c-b7a7-4fce6d37b532",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.787Z",
+      "updated_at": "2024-11-04T02:45:06.787Z",
+      "is_active": true,
+      "name": "California",
+      "two_letter_code": "CA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "b6805087-4349-42d4-b6cc-c8d8bef2c5f2",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.786Z",
+      "updated_at": "2024-11-04T02:45:06.786Z",
+      "is_active": true,
+      "name": "Arizona",
+      "two_letter_code": "AZ",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "bc826167-5a24-4680-b12a-bb812e82d103",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.816Z",
+      "updated_at": "2024-11-04T02:45:06.816Z",
+      "is_active": true,
+      "name": "New Brunswick",
+      "two_letter_code": "NB",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "c4db5d54-131a-41d6-9d92-cf227814fd49",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.800Z",
+      "updated_at": "2024-11-04T02:45:06.800Z",
+      "is_active": true,
+      "name": "Nebraska",
+      "two_letter_code": "NE",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "c7bb0ef7-f789-445e-ae1f-424958e64cef",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.799Z",
+      "updated_at": "2024-11-04T02:45:06.799Z",
+      "is_active": true,
+      "name": "Missouri",
+      "two_letter_code": "MO",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "cac416e2-131f-41ac-8079-7195aefd85cb",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.826Z",
+      "updated_at": "2024-11-04T02:45:06.826Z",
+      "is_active": true,
+      "name": "South Australia",
+      "two_letter_code": "SA",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "cef505ee-153c-4d95-9ca2-9c36579787ae",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.814Z",
+      "updated_at": "2024-11-04T02:45:06.814Z",
+      "is_active": true,
+      "name": "Alberta",
+      "two_letter_code": "AB",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "cfe47416-d36f-48e4-9bca-6b44dcdad8c0",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.810Z",
+      "updated_at": "2024-11-04T02:45:06.810Z",
+      "is_active": true,
+      "name": "Utah",
+      "two_letter_code": "UT",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "db1fd807-eecf-47ed-813d-66ff3e101d87",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.812Z",
+      "updated_at": "2024-11-04T02:45:06.812Z",
+      "is_active": true,
+      "name": "West Virginia",
+      "two_letter_code": "WV",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "dc5e9673-2c4e-427d-9806-bdd3557b2ed3",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.825Z",
+      "updated_at": "2024-11-04T02:45:06.825Z",
+      "is_active": true,
+      "name": "Victoria",
+      "two_letter_code": "VIC",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "e01dc783-69f9-4e8b-8fb1-0691e6bfb71c",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.830Z",
+      "updated_at": "2024-11-04T02:45:06.830Z",
+      "is_active": true,
+      "name": "Waikato",
+      "two_letter_code": "WKO",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "e54f530b-62c9-469d-b21d-0bda7e2a0749",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.785Z",
+      "updated_at": "2024-11-04T02:45:06.785Z",
+      "is_active": true,
+      "name": "Alabama",
+      "two_letter_code": "AL",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "ec82f7ea-de88-43cf-a6c4-2ce96816c3f7",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.805Z",
+      "updated_at": "2024-11-04T02:45:06.805Z",
+      "is_active": true,
+      "name": "North Dakota",
+      "two_letter_code": "ND",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "ee7e68f7-ce42-4a3e-b6ee-ff14fbdea39a",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.794Z",
+      "updated_at": "2024-11-04T02:45:06.794Z",
+      "is_active": true,
+      "name": "Iowa",
+      "two_letter_code": "IA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "ef081dd7-18bc-4035-bbd6-7b9b8f7887fa",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.798Z",
+      "updated_at": "2024-11-04T02:45:06.798Z",
+      "is_active": true,
+      "name": "Michigan",
+      "two_letter_code": "MI",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f0ea9805-ea7f-4317-aaf3-998177c6d6ab",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.810Z",
+      "updated_at": "2024-11-04T02:45:06.810Z",
+      "is_active": true,
+      "name": "Texas",
+      "two_letter_code": "TX",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f4cfb109-f7dc-4a1f-b9e3-5eab6b60dfe0",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.827Z",
+      "updated_at": "2024-11-04T02:45:06.827Z",
+      "is_active": true,
+      "name": "Tasmania",
+      "two_letter_code": "TAS",
+      "country": "180f7a11-1043-49e7-8076-3036660100ec"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f7530630-7f27-4610-849e-3f76e4a19f50",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.796Z",
+      "updated_at": "2024-11-04T02:45:06.796Z",
+      "is_active": true,
+      "name": "Maine",
+      "two_letter_code": "ME",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f975195c-80c6-4bcf-90f3-d5cfc1da321c",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.817Z",
+      "updated_at": "2024-11-04T02:45:06.817Z",
+      "is_active": true,
+      "name": "Northwest Territories",
+      "two_letter_code": "NT",
+      "country": "386c0b8b-c4b5-4765-81cc-7d6df3e8ceb3"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f97a24c6-eae3-482e-b610-a8016c71ad61",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.812Z",
+      "updated_at": "2024-11-04T02:45:06.812Z",
+      "is_active": true,
+      "name": "Washington",
+      "two_letter_code": "WA",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "f9b9cdce-d46c-4d6e-9e33-e0a4e1838ed8",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.837Z",
+      "updated_at": "2024-11-04T02:45:06.837Z",
+      "is_active": true,
+      "name": "Southland",
+      "two_letter_code": "STL",
+      "country": "17748fed-91a2-4cf5-945d-b9046bd2a491"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "fd65e61b-7956-467c-ac70-7a650f1535fa",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.792Z",
+      "updated_at": "2024-11-04T02:45:06.792Z",
+      "is_active": true,
+      "name": "Idaho",
+      "two_letter_code": "ID",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "site_settings.state",
+    "pk": "ff073201-e922-47b3-8d2d-0e1b47138918",
+    "fields": {
+      "created_at": "2024-11-04T02:45:06.793Z",
+      "updated_at": "2024-11-04T02:45:06.793Z",
+      "is_active": true,
+      "name": "Indiana",
+      "two_letter_code": "IN",
+      "country": "db538637-77e1-4520-b773-5b4906411f2f"
+    }
+  },
+  {
+    "model": "clients.industry",
+    "pk": "0150dc98-dcd8-4ac2-a314-bc1016cccfe5",
+    "fields": {
+      "created_at": "2024-11-04T16:04:20.089Z",
+      "updated_at": "2024-11-04T16:04:20.090Z",
+      "is_active": true,
+      "name": "Banking",
+      "icon_name": null,
+      "priority": 10
+    }
+  },
+  {
+    "model": "clients.industry",
+    "pk": "425b032a-ddeb-4067-8601-e436a6c1abd9",
+    "fields": {
+      "created_at": "2024-11-04T16:04:29.958Z",
+      "updated_at": "2024-11-04T16:04:45.049Z",
+      "is_active": true,
+      "name": "Technology",
+      "icon_name": null,
+      "priority": 10
+    }
+  },
+  {
+    "model": "clients.industry",
+    "pk": "90d9eecd-b163-44fd-983b-40a8e09d1ad4",
+    "fields": {
+      "created_at": "2024-11-04T16:04:35.534Z",
+      "updated_at": "2024-11-04T16:04:35.534Z",
+      "is_active": true,
+      "name": "Legal",
+      "icon_name": null,
+      "priority": 10
+    }
+  },
+  {
+    "model": "clients.industry",
+    "pk": "d340f1ba-d052-43ab-b350-9d87f5048ff0",
+    "fields": {
+      "created_at": "2024-11-04T16:04:54.327Z",
+      "updated_at": "2024-11-04T16:04:54.327Z",
+      "is_active": true,
+      "name": "Healthcare",
+      "icon_name": null,
+      "priority": 10
+    }
+  },
+  {
+    "model": "clients.industry",
+    "pk": "eab8de5d-c327-4392-83fe-4eec64166c15",
+    "fields": {
+      "created_at": "2024-11-04T16:05:03.968Z",
+      "updated_at": "2024-11-04T16:05:03.968Z",
+      "is_active": true,
+      "name": "Automotive",
+      "icon_name": null,
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "0aa39e85-90f5-4f63-ae4b-4e5d3961935e",
+    "fields": {
+      "created_at": "2024-11-04T12:30:13.810Z",
+      "updated_at": "2024-11-04T12:32:41.035Z",
+      "is_active": true,
+      "name": "Hindi / Urdu",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "2592b10e-c91b-4c30-99aa-e7d87858a2d9",
+    "fields": {
+      "created_at": "2024-11-04T12:29:27.974Z",
+      "updated_at": "2024-11-04T12:29:27.975Z",
+      "is_active": true,
+      "name": "Spanish",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "2a62dfd8-4d4b-44dd-a9ea-183c6cfaf92e",
+    "fields": {
+      "created_at": "2024-11-04T12:29:48.202Z",
+      "updated_at": "2024-11-04T12:29:48.202Z",
+      "is_active": true,
+      "name": "German",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "4b804d06-f964-4153-aa80-be9654bfb69a",
+    "fields": {
+      "created_at": "2024-11-04T12:31:04.764Z",
+      "updated_at": "2024-11-04T12:31:04.764Z",
+      "is_active": true,
+      "name": "Italian",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "4bbafcdc-0802-4508-b6a2-3237b60cde32",
+    "fields": {
+      "created_at": "2024-11-04T12:31:33.367Z",
+      "updated_at": "2024-11-04T12:31:33.367Z",
+      "is_active": true,
+      "name": "Polish",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "59ca45ee-17ec-49c8-a0e5-d94980c8a3b2",
+    "fields": {
+      "created_at": "2024-11-04T12:29:33.170Z",
+      "updated_at": "2024-11-04T12:29:33.170Z",
+      "is_active": true,
+      "name": "French",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "7cf12171-0817-4f73-a8a6-6e0a34f44dbf",
+    "fields": {
+      "created_at": "2024-11-04T12:31:10.101Z",
+      "updated_at": "2024-11-04T12:31:10.101Z",
+      "is_active": true,
+      "name": "Korean",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "8d5bc47c-a070-4088-b93e-faf50c132c8f",
+    "fields": {
+      "created_at": "2024-11-04T12:30:42.303Z",
+      "updated_at": "2024-11-04T12:30:42.303Z",
+      "is_active": true,
+      "name": "Japanese",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "9af8aa14-d4d6-4d8b-a2af-95ac8351cc37",
+    "fields": {
+      "created_at": "2024-11-04T12:29:14.881Z",
+      "updated_at": "2024-11-04T12:32:50.417Z",
+      "is_active": true,
+      "name": "Chinese / Mandarin",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "a4f2c0c8-fcfa-48df-bfd1-78247b63e344",
+    "fields": {
+      "created_at": "2024-11-04T12:33:37.169Z",
+      "updated_at": "2024-11-04T12:33:37.169Z",
+      "is_active": true,
+      "name": "Portuguese",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "d9e67dde-3bbf-48f9-abe2-71e93b1b8654",
+    "fields": {
+      "created_at": "2024-11-04T12:29:55.824Z",
+      "updated_at": "2024-11-04T12:29:55.824Z",
+      "is_active": true,
+      "name": "Arabic",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.language",
+    "pk": "eb7b88b6-1317-4e82-b98d-d4abbdfe24e0",
+    "fields": {
+      "created_at": "2024-11-04T12:30:31.071Z",
+      "updated_at": "2024-11-04T12:30:31.071Z",
+      "is_active": true,
+      "name": "Russian",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "1f24217c-5b93-4932-b1e4-50af70ef2e50",
+    "fields": {
+      "created_at": "2024-11-04T12:19:16.702Z",
+      "updated_at": "2024-11-04T19:40:43.594Z",
+      "is_active": true,
+      "name": "Company Car",
+      "icon_name": null,
+      "description": "",
+      "priority": 7
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "2ba8c7d4-f8c2-45b7-8302-5e08c4552562",
+    "fields": {
+      "created_at": "2024-11-04T12:21:16.003Z",
+      "updated_at": "2024-11-04T19:40:43.593Z",
+      "is_active": true,
+      "name": "Relocation Assistance",
+      "icon_name": null,
+      "description": "",
+      "priority": 8
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "2f1e8012-8194-42a7-994a-9a1e02ee7cc0",
+    "fields": {
+      "created_at": "2024-11-04T12:16:53.061Z",
+      "updated_at": "2024-11-04T19:40:43.592Z",
+      "is_active": true,
+      "name": "Vision Insurance",
+      "icon_name": null,
+      "description": "",
+      "priority": 9
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "40456224-10f9-4594-b325-3764c501417f",
+    "fields": {
+      "created_at": "2024-11-04T12:19:36.767Z",
+      "updated_at": "2024-11-04T12:19:36.767Z",
+      "is_active": true,
+      "name": "Childcare Assistance",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "4752550b-7892-4964-9e9e-423589e3a54f",
+    "fields": {
+      "created_at": "2024-11-04T12:16:42.192Z",
+      "updated_at": "2024-11-04T19:39:53.102Z",
+      "is_active": true,
+      "name": "Partial Health Insurance",
+      "icon_name": null,
+      "description": "",
+      "priority": 4
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "4c377d36-d248-4e7f-ad2f-b5c56c1b9b76",
+    "fields": {
+      "created_at": "2024-11-04T12:21:44.470Z",
+      "updated_at": "2024-11-04T12:21:44.470Z",
+      "is_active": true,
+      "name": "Health Savings Account (HSA) Contributions",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "61506a68-c55d-4c17-85ea-c9f3039a1a93",
+    "fields": {
+      "created_at": "2024-11-04T12:16:30.807Z",
+      "updated_at": "2024-11-04T19:39:53.101Z",
+      "is_active": true,
+      "name": "Full Health Insurance",
+      "icon_name": null,
+      "description": "",
+      "priority": 3
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "6e0cf15e-225f-445d-ac1e-8a12b4415d9d",
+    "fields": {
+      "created_at": "2024-11-04T12:22:57.482Z",
+      "updated_at": "2024-11-04T12:22:57.482Z",
+      "is_active": true,
+      "name": "Disability Insurance",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "7448906b-a15e-4f44-a9d5-914dd32a08cc",
+    "fields": {
+      "created_at": "2024-11-04T12:17:52.324Z",
+      "updated_at": "2024-11-04T12:17:52.325Z",
+      "is_active": true,
+      "name": "Unlimited Paid Time Off",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "78eb7720-5d31-4ead-b2fa-ad432a9b207a",
+    "fields": {
+      "created_at": "2024-11-04T12:17:12.033Z",
+      "updated_at": "2024-11-04T19:40:43.590Z",
+      "is_active": true,
+      "name": "Gym Membership or Reimbursement",
+      "icon_name": null,
+      "description": "",
+      "priority": 6
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "91c78bcc-bdfc-4891-a827-cd644794364d",
+    "fields": {
+      "created_at": "2024-11-04T12:22:16.695Z",
+      "updated_at": "2024-11-04T12:22:16.695Z",
+      "is_active": true,
+      "name": "Retirement Savings Plan",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "9d2de791-6f28-4e31-9683-f6fe56897a26",
+    "fields": {
+      "created_at": "2024-11-04T12:21:54.942Z",
+      "updated_at": "2024-11-04T12:21:54.942Z",
+      "is_active": true,
+      "name": "Flexible Spending Account (FSA) Options",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "b005626e-a616-4d90-8222-c628ef30e928",
+    "fields": {
+      "created_at": "2024-11-04T12:16:18.904Z",
+      "updated_at": "2024-11-04T19:39:53.100Z",
+      "is_active": true,
+      "name": "Partial Dental Coverage",
+      "icon_name": null,
+      "description": "",
+      "priority": 2
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "c58d2922-a69b-4cc1-9907-13f885520814",
+    "fields": {
+      "created_at": "2024-11-04T12:18:29.534Z",
+      "updated_at": "2024-11-04T12:18:29.534Z",
+      "is_active": true,
+      "name": "Certification Sponsorship",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "cb2c8676-a325-4ed8-a86b-90303b394518",
+    "fields": {
+      "created_at": "2024-11-04T12:16:07.859Z",
+      "updated_at": "2024-11-04T19:39:53.099Z",
+      "is_active": true,
+      "name": "Full Dental Coverage",
+      "icon_name": null,
+      "description": "",
+      "priority": 1
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "d23ad84b-d6f5-4903-bfd9-58b75e2ce557",
+    "fields": {
+      "created_at": "2024-11-04T12:17:01.457Z",
+      "updated_at": "2024-11-04T12:17:01.457Z",
+      "is_active": true,
+      "name": "Mental Health Support",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "d98c71c2-0cff-4b0d-90a3-87d6a5d94bac",
+    "fields": {
+      "created_at": "2024-11-04T12:19:26.037Z",
+      "updated_at": "2024-11-04T12:19:26.038Z",
+      "is_active": true,
+      "name": "Meal Allowances",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "dac84432-95b2-4419-9a34-418bc2665d7e",
+    "fields": {
+      "created_at": "2024-11-04T12:23:05.158Z",
+      "updated_at": "2024-11-04T12:23:05.158Z",
+      "is_active": true,
+      "name": "Life Insurance",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "e96b21c5-080a-4ff0-8ed7-2de3cc150067",
+    "fields": {
+      "created_at": "2024-11-04T12:19:56.989Z",
+      "updated_at": "2024-11-04T12:19:56.990Z",
+      "is_active": true,
+      "name": "Commuter Benefits",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "ea6e791e-c28f-449b-8d5e-21daf9903a24",
+    "fields": {
+      "created_at": "2024-11-04T12:17:34.322Z",
+      "updated_at": "2024-11-04T12:17:34.322Z",
+      "is_active": true,
+      "name": "401(k) Matching",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "edb6df68-2325-4a2e-8679-a2668e82c3ab",
+    "fields": {
+      "created_at": "2024-11-04T12:18:08.047Z",
+      "updated_at": "2024-11-04T19:39:53.095Z",
+      "is_active": true,
+      "name": "Flexible Work Hours",
+      "icon_name": null,
+      "description": "",
+      "priority": 5
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "ef955093-3ed5-4649-a14a-87f3d73d402f",
+    "fields": {
+      "created_at": "2024-11-04T12:18:40.135Z",
+      "updated_at": "2024-11-04T12:18:40.135Z",
+      "is_active": true,
+      "name": "Mentorship Programs",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.benefit",
+    "pk": "f3d08796-3ec7-4833-8e32-7e98cc26a82f",
+    "fields": {
+      "created_at": "2024-11-04T12:17:23.761Z",
+      "updated_at": "2024-11-04T12:17:23.761Z",
+      "is_active": true,
+      "name": "Wellness Programs",
+      "icon_name": null,
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.cancelreason",
+    "pk": "0221b0c3-c9f4-4944-81d9-7af76ad8991e",
+    "fields": {
+      "created_at": "2024-11-04T12:23:50.400Z",
+      "updated_at": "2024-11-04T12:23:50.400Z",
+      "is_active": true,
+      "name": "We hired internally",
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.cancelreason",
+    "pk": "2aae28b6-74ac-4a0a-b62d-200ff33857f3",
+    "fields": {
+      "created_at": "2024-11-04T12:25:35.518Z",
+      "updated_at": "2024-11-04T12:25:35.519Z",
+      "is_active": true,
+      "name": "Not getting good candidates here",
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.cancelreason",
+    "pk": "62e7ca10-7481-46d8-b9a2-d3945cf57b0a",
+    "fields": {
+      "created_at": "2024-11-04T12:24:53.457Z",
+      "updated_at": "2024-11-04T12:24:53.457Z",
+      "is_active": true,
+      "name": "Role No Longer Needed",
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "jobs.cancelreason",
+    "pk": "6352e208-99d0-4289-896c-302a7b56b58d",
+    "fields": {
+      "created_at": "2024-11-04T12:26:45.763Z",
+      "updated_at": "2024-11-04T12:26:45.763Z",
+      "is_active": true,
+      "name": "We hired through an external recruiter",
+      "description": "",
+      "priority": 10
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "336ebc82-d0d3-47cf-bc04-c63b27869727",
+    "fields": {
+      "created_at": "2024-11-04T15:55:15.972Z",
+      "updated_at": "2024-11-04T19:38:30.990Z",
+      "is_active": true,
+      "name": "Design",
+      "icon_name": null,
+      "priority": 8
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "693a980e-3db8-4ce6-add5-e76942d176c3",
+    "fields": {
+      "created_at": "2024-11-04T15:58:39.526Z",
+      "updated_at": "2024-11-04T19:38:30.989Z",
+      "is_active": true,
+      "name": "Legal",
+      "icon_name": null,
+      "priority": 4
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "7afcacad-a44d-4f58-ae8b-1e1ccaaadfc2",
+    "fields": {
+      "created_at": "2024-11-04T15:58:03.766Z",
+      "updated_at": "2024-11-04T19:38:30.988Z",
+      "is_active": true,
+      "name": "Medical / Healthcare",
+      "icon_name": null,
+      "priority": 3
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "8c5da299-c357-45ce-885f-32abcca28d9b",
+    "fields": {
+      "created_at": "2024-11-04T15:57:20.828Z",
+      "updated_at": "2024-11-04T19:38:30.987Z",
+      "is_active": true,
+      "name": "C-Level (e.g. President or Director or VP or CEO)",
+      "icon_name": null,
+      "priority": 2
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "8ffad5c1-de63-4ba6-abf5-76a3e387ae26",
+    "fields": {
+      "created_at": "2024-11-04T15:55:57.752Z",
+      "updated_at": "2024-11-04T19:38:30.985Z",
+      "is_active": true,
+      "name": "Engineering (Civil | Electrical | Mechanical | Architecture)",
+      "icon_name": null,
+      "priority": 5
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "90ce8257-5434-4732-bfb8-d8639d0e0665",
+    "fields": {
+      "created_at": "2024-11-04T15:58:17.089Z",
+      "updated_at": "2024-11-04T19:38:30.984Z",
+      "is_active": true,
+      "name": "Marketing / Advertising / Sales",
+      "icon_name": null,
+      "priority": 6
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "b8dea0a5-6483-4386-a1cf-b25de31856ba",
+    "fields": {
+      "created_at": "2024-11-04T15:58:49.931Z",
+      "updated_at": "2024-11-04T19:38:30.983Z",
+      "is_active": true,
+      "name": "Accounting",
+      "icon_name": null,
+      "priority": 7
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "cd58c1bd-8597-4ee3-a1e2-bc2bd544480d",
+    "fields": {
+      "created_at": "2024-11-04T15:59:06.704Z",
+      "updated_at": "2024-11-04T19:38:30.981Z",
+      "is_active": true,
+      "name": "Other",
+      "icon_name": null,
+      "priority": 100
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "ceab7bb4-8a34-4556-a172-28e94584a3bb",
+    "fields": {
+      "created_at": "2024-11-04T15:55:01.376Z",
+      "updated_at": "2024-11-04T19:38:30.976Z",
+      "is_active": true,
+      "name": "Engineering (Software/Tech)",
+      "icon_name": null,
+      "priority": 1
+    }
+  },
+  {
+    "model": "recruiters.jobcategory",
+    "pk": "fd8cf02c-8a33-4968-aa86-f67e53843878",
+    "fields": {
+      "created_at": "2024-11-04T15:59:01.336Z",
+      "updated_at": "2024-11-04T15:59:01.336Z",
+      "is_active": true,
+      "name": "Operations",
+      "icon_name": null,
+      "priority": 10
+    }
+  }
+]

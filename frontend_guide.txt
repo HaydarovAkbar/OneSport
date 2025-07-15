@@ -1,0 +1,22 @@
+
+INOVIE
+------------------------------------
+
+Filter Parameters:
+
+Name: status
+Type: Integer
+Values: 1: Due, 2: Paid, 3: Void, 4: Refunded
+Example: /hires/invoices/?status=1
+Filter Syntax:
+
+__gte (greater than or equal): /hires/invoices/?due_date__gte=2023-01-01
+__lte (less than or equal): /hires/invoices/?unit_price__lte=500
+Sample Requests:
+
+/hires/invoices/?status=1&overdue=true
+/hires/invoices/?due_date__lte=2023-12-31&currency=1
+
+
+Pagination and Sorting
+/api/invoices/?page=1&page_size=5&ordering=-due_date&search=abc

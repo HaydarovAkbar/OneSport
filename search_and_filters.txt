@@ -1,0 +1,67 @@
+
+
+### **Recruiter**
+- FILTERS -  is_active, Country - State - industry - Active Jobs - No. of Hires - primary/sec_industry - status - superuser
+- SORT BY -  created_on - Active Jobs - Resume Submitted - Interviews - Interviewing - success-rate - hires
+- SEARCH FIELDS - first_name, last_name, email, phone, introduction, story, agency.name, stripe_id
+
+
+### **Recruiter Payments**
+- FILTERS -  is_active, amount, due_on, currency, hire, status, percentage_of_full
+- SORT BY - amount, created_at
+- SEARCH FIELDS -  rp.hire.recruiter.first and last name, rp.job.title, rp.job.client.company_name
+
+---
+
+### **Client**
+- FILTERS -  is_active, status, user_type, Country, State, industry, Active jobs, Hires, no.of. employees, interviewing, payment_method_added
+- SORT BY - created_at, active jobs, resume submitted, interviews, interviewing, hires, team size
+- SEARCH FIELDS -  company_name, about, stripe_id, client, clientuserprofile.first and last
+
+---
+
+### **Client-user-profile**
+- FILTERS -  user_type, is_active
+- SORT BY -  create_at
+- SEARCH FIELDS - first name, last name, email
+
+---
+
+### **Candidate**
+- FILTERS -
+- SORT BY -
+- SEARCH FIELDS -
+
+---
+
+### **Job**
+- FILTERS -
+- SEARCH FIELDS -
+
+---
+
+### **Hires**
+- FILTERS -  payment_status, payout, commission, commission_percentage
+- SORT BY - join_date, payout, commission, commission_percentage
+- SEARCH FIELDS -  recruiter. first and last , agency.agency_name, candidate.first and last, client.company_name
+
+--------
+
+### **RecruiterApplication**
+- FILTERS -
+- SORT -
+- SEARCH FIELDS -
+
+
+------
+
+### **Message**
+- FILTERS -
+- SEARCH FIELDS -
+
+---
+
+### **Invoice**
+- FILTERS -  status, due_date, Country, State, overdue (true/false)
+- SORT - created_at, due_date, unit_price
+- SEARCH FIELDS - invoice.client.company_name - invoice.hire.candidiate.first_name and last_name -  invoice.clinet.company_name and about - tax_name

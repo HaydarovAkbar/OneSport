@@ -1,0 +1,130 @@
+About Project:
+
+This app must run with daphne instead of gunicorn in order to provide async connection
+
+1: Daphne
+daphne config.asgi:application --port 8000
+
+2: nginx config:
+    location /ws/ {
+        proxy_pass http://127.0.0.1:8000;  # Proxy WebSocket connections to Daphne or Uvicorn (port 8000 or your custom port)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+---------------------------------------------------------------------------------------------------------------------
+CHAT
+------------------------------------
+"chat_room" is place where recruiter and client send message, 
+or  we can visualize it as a history of list in which we chat with people
+
+1: create: /chats/chat-room/create/ 
+
+Recruiter: uuid
+Clients: List     
+Example: 
+{
+  "recruiter": "fb4f2036-51e3-4bd5-8461-529a77ce5bca",
+  "clients": [
+    "182eebdd-9a2a-4bf2-93e1-11882841cb9f", 
+    "182bebdd-9a2a-4bf2-93e1-11882841cb9f",
+    ...
+  ]
+}
+
+2: list: /chats/chat-room/list/
+
+Filter Parameters:
+Recruiter: uuid
+Clients : uuid
+Example: /chats/chat-room/list/?client=182eebdd-9a2a-4bf2-93e1-11882841cb9f
+
+-----------------------------------------------------------------------------
+
+MESSAGE 
+-----------------------------------------------------------------------------
+1: creation: /chats/messages/create/
+
+Chat_room:uuid 
+Job: uuid 
+content: string
+file: file
+
+all is sent in form/data fashion
+if file is sent, file field should be filled and content is none, or vice versa
+
+2: update: /chats/messages/detail/{uuid}/ 
+
+Updated parameters:
+
+Content: string
+
+you can only update content, not file, when it comes to updating file first you need to delete the file then recreate it.
+
+3: list: /chats/messages/list/:
+After accessing one chat_room yoy need to deliver all messages related to the chat_room
+Filter Parameters:
+
+Sender:uuid
+Chat_room:uuid
+Sender_email:email
+
+-------------------------------------------------------------------------------------------------------------------
+Chat WebSocket
+-------------------------------------------------------------------------------------------------------------------
+url: ws://localhost:8000/ws/chat/<CURRENT_CHAT_ROOM_UUID>/?token=<YOUR_ACCESS_TOKEN> for local development
+url: wss://<your_domain>/ws/chat/<CURRENT_CHAT_ROOM_UUID>/?token=<YOUR_ACCESS_TOKEN> for  production
+
+1.When message is created, updated, deleted over REST method, information about action over the message is send to the chat_room 
+over websocket protocol by which other user who are in chat room  informed about the changes without updating page. 
+Example:
+-----------------------------------------------------------------------------------------------------------------------------------
+1:creation: 
+{"type": "message_created", "message": {"uuid": "df34d961-22a0-46d4-8ed1-0fe8d1c35284", "sender": "7e567d18-468b-4563-833f-b3ea48639284", 
+"chat_room": "6eface74-d674-4f7b-b6ce-f96ea9c091d7", "file": null, "job": null, "content": "assa", "timestamp": "2024-11-18T09:04:16.376929+00:00", 
+"is_edited": false, "is_viewed": false, "read_by": []}}
+
+2:update:
+{"type": "message_updated", "message": {"uuid": "ed4bcfe9-85ab-4abe-851b-76d6047f5572", "sender": "7e567d18-468b-4563-833f-b3ea48639284", 
+"chat_room": "e6270485-02ba-4270-9f4e-f0a9c83554ef", "file": "/media/chat_files/Screenshot_from_2024-11-14_18-12-03_QTbo98H.png", 
+"content": "SAlomasd", "job": null, "timestamp": "2024-11-18T08:23:25.112566+00:00", "is_edited": true, "is_viewed": true, "read_by": ["7e567d18-468b-4563-833f-b3ea48639284"]}}
+
+3: deletion:
+{"type": "message_deleted", "message": {"uuid": "d1470cd7-a710-45dd-9e8d-ea6e03909ab0", "sender": "7e567d18-468b-4563-833f-b3ea48639284", 
+"chat_room": "e6270485-02ba-4270-9f4e-f0a9c83554ef", "file": "/media/chat_files/Screenshot_from_2024-11-14_18-12-03_UYUUcKt.png", "content": "qaleysada", "job": null, 
+"timestamp": "2024-11-18T08:23:51.379754+00:00", "is_edited": false, "is_viewed": false, "read_by": []}}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2: In frontend side, you catch the message by its type like <"type": "message_deleted"> and then you can act accordingly.
+
+3: There other other two action done over WebSocket instead of http
+
+    1. typing indicator notification
+    2. read_by notification
+
+Example for typing indicator:
+input: {"type":"typing", "typing":true} 
+
+output: {"type": "typing", "typing_users": ["7e567d18-468b-4563-833f-b3ea48639284"]}
+
+Logic: typing_users is dinamic, who write they send typing indicator and then information shown to other user in chat_room
+
+-----------------------------------------------------------------------------------
+
+
+Example for read_by notification:
+input: {"type":"message_read", "message_id":"7f712df8-55b9-4641-94cd-b9efa89ad14b"}
+
+output: {"type": "message_read", "message_id": "7f712df8-55b9-4641-94cd-b9efa89ad14b", "user_id": "7e567d18-468b-4563-833f-b3ea48639284"}
+
+Logic: By sending such a information, user_id is added to "read_by" field and 
+why need this If some users in chat_room they cannot retrieve message list one more time without page reloading,
+which is indicator for message owner who knows which user ,who is already in room, read the message.
+
+
+
+
+
+

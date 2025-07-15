@@ -1,0 +1,55 @@
+Client
+-----------
+
+
+Email
+
+Job Posted - to every user of client (N E)
+Recruiter Applied - to every user of client  (N E)
+Recruiter Added - to every user of client  (N E)
+Resume Submitted - to every user of client  (N E)
+Invoice Created - to every user of client  (N E)
+Invoice Overdue - to every user of client  (N E)
+Invoice Paid - to every user of client  (N E)
+Message received - to the user who received the message - only when the there have been no notification for the same conversation in the last 10 minutes (To the user who received the message) (N E)
+
+
+Notifications
+
+Job Posted - to every user of client (N E)
+Recruiter Applied - to every user of client  (N E)
+Recruiter Added - to every user of client  (N E)
+Resume Submitted - to every user of client  (N E)
+Invoice Created - to every user of client  (N E)
+Invoice Overdue - to every user of client  (N E)
+Invoice Paid - to every user of client  (N E)
+Message received - to the user who received the message - only when the there have been no notification for the same conversation in the last 10 minutes (To the user who received the message) (N E)
+
+
+Logs
+
+
+
+Recruiter
+_____________
+
+Email
+
+Application Accepted  (N E)
+Application Denied (N E)
+Resume Stage Changed  (N E)
+Candidate Interview   (N E)
+Candidate Hired  (N E)
+Recruiter Payment paid   (N E)
+Message received - to the user who received the message - only when the there have been no notification for the same conversation in the last 10 minutes (To the user who received the message) (N E)
+
+
+Notifications
+
+Application Accepted  (N E)
+Application Denied (N E)
+Resume Stage Changed  (N E)
+Candidate Interview   (N E)
+Candidate Hired  (N E)
+Recruiter Payment paid   (N E)
+Message received - to the user who received the message - only when the there have been no notification for the same conversation in the last 10 minutes (To the user who received the message) (N E)
