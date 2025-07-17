@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: onesport_db
+      POSTGRES_USER: onesport_user
+      POSTGRES_PASSWORD: your_secure_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=0
+      - DATABASE_URL=postgresql://onesport_user:your_secure_password@db:5432/onesport_db
+      - DJANGO_SETTINGS_MODULE=OneSport.settings.production
+    depends_on:
+      - db
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn OneSport.wsgi:application --bind 0.0.0.0:8000"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
