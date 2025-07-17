@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('site_settings', '0005_companysize_alter_country_options_and_more'),
+        ("site_settings", "0005_companysize_alter_country_options_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='companysize',
-            name='priority',
+            model_name="companysize",
+            name="priority",
             field=models.IntegerField(default=0),
         ),
     ]

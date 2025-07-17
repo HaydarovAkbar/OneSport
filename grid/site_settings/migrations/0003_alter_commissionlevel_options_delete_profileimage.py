@@ -4,17 +4,16 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('site_settings', '0002_profileimage'),
+        ("site_settings", "0002_profileimage"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='commissionlevel',
-            options={'ordering': ['min_commission']},
+            name="commissionlevel",
+            options={"ordering": ["min_commission"]},
         ),
         migrations.DeleteModel(
-            name='ProfileImage',
+            name="ProfileImage",
         ),
     ]

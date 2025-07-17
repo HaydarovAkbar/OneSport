@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 
 from django.utils import timezone
@@ -7,9 +7,10 @@ from .models import Hire, Invoice
 
 
 def generate_unique_code():
-    length = 8  # Set the length of the code
+    """Generate cryptographically secure unique code."""
+    length = 8
     chars = string.ascii_uppercase + string.digits
-    return "".join(random.choice(chars) for _ in range(length))
+    return "".join(secrets.choice(chars) for _ in range(length))  # Use secrets instead of random
 
 
 def create_invoice_for_hire(hire_id):

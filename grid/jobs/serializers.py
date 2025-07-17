@@ -1,8 +1,8 @@
 from rest_framework import serializers
 
-from .models import Benefit, InterviewStep, Job, JobAttachment
 from ..clients.models import Address, Client
 from ..users.models import User
+from .models import Benefit, InterviewStep, Job, JobAttachment
 
 
 class JobAttachmentSerializer(serializers.ModelSerializer):
@@ -41,10 +41,27 @@ class CreateJobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = [
-            "title", "no_of_roles", "description", "about_company", "must_haves", "nice_to_haves",
-            "position_type", "job_type", "location", "benefits", "book_of_business", "min_book_of_business",
-            "salary_min", "salary_max", "expected_commission", "signup_bonus", "stocks_value",
-            "ideal_resume", "interview_steps", "attachments", "top_job",
+            "title",
+            "no_of_roles",
+            "description",
+            "about_company",
+            "must_haves",
+            "nice_to_haves",
+            "position_type",
+            "job_type",
+            "location",
+            "benefits",
+            "book_of_business",
+            "min_book_of_business",
+            "salary_min",
+            "salary_max",
+            "expected_commission",
+            "signup_bonus",
+            "stocks_value",
+            "ideal_resume",
+            "interview_steps",
+            "attachments",
+            "top_job",
         ]
 
     def validate(self, data):
@@ -85,10 +102,28 @@ class JobListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = [
-            "uuid", "title", "status", "no_of_roles", "description", "about_company",
-            "must_haves", "nice_to_haves", "job_type", "position_type",
-            "salary_min", "salary_max", "expected_commission", "signup_bonus", "stocks_value", "book_of_business",
-            "top_job", "client", "location", "commission_percentage", "visa_sponsorship", "position_type",
+            "uuid",
+            "title",
+            "status",
+            "no_of_roles",
+            "description",
+            "about_company",
+            "must_haves",
+            "nice_to_haves",
+            "job_type",
+            "position_type",
+            "salary_min",
+            "salary_max",
+            "expected_commission",
+            "signup_bonus",
+            "stocks_value",
+            "book_of_business",
+            "top_job",
+            "client",
+            "location",
+            "commission_percentage",
+            "visa_sponsorship",
+            "position_type",
         ]
 
 
@@ -109,10 +144,30 @@ class JobDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = [
-            "title", "no_of_roles", "description", "about_company", "must_haves", "nice_to_haves",
-            "position_type", "job_type", "location", "benefits", "book_of_business", "min_book_of_business",
-            "salary_min", "salary_max", "expected_commission", "signup_bonus", "stocks_value",
-            "ideal_resume", "interview_steps", "attachments", "top_job", "notes", "client", "posted_by",
+            "title",
+            "no_of_roles",
+            "description",
+            "about_company",
+            "must_haves",
+            "nice_to_haves",
+            "position_type",
+            "job_type",
+            "location",
+            "benefits",
+            "book_of_business",
+            "min_book_of_business",
+            "salary_min",
+            "salary_max",
+            "expected_commission",
+            "signup_bonus",
+            "stocks_value",
+            "ideal_resume",
+            "interview_steps",
+            "attachments",
+            "top_job",
+            "notes",
+            "client",
+            "posted_by",
         ]
 
     def get_interview_steps(self, obj):
@@ -131,6 +186,4 @@ class JobUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Job
-        fields = [
-            "benefits", "interview_steps", "notes", "about_company", "nice_to_haves"
-        ]
+        fields = ["benefits", "interview_steps", "notes", "about_company", "nice_to_haves"]

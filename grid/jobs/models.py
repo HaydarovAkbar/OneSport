@@ -3,10 +3,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.db.models import FileField
 
-from grid.clients.models import Address, Client
 from grid.core.models import CoreModel
-from grid.recruiters.models import JobCategory, Recruiter
-from grid.site_settings.models import Country, Currency, State
 
 
 def validate_file_extension(value):
@@ -149,8 +146,8 @@ class Job(CoreModel):
 
 class JobAttachment(CoreModel):
     file = models.FileField(upload_to="job_attachments/", validators=[validate_file_extension])
-    uploaded_by = models.ForeignKey("users.User", on_delete=models.CASCADE)  # Assuming User model exists
-    job = models.ForeignKey("Job", on_delete=models.CASCADE, null=True, blank=True)  # Assuming Job model exists
+    uploaded_by = models.ForeignKey("users.User", on_delete=models.CASCADE)
+    job = models.ForeignKey("Job", on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.file.name

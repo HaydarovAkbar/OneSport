@@ -1,6 +1,6 @@
 from django.urls import path
 
-from grid.site_settings.views import CountryListView, StateListView, CompanySizeListView
+from grid.site_settings.views import CompanySizeListView, CountryListView, StateListView
 
 
 urlpatterns = [

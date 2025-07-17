@@ -4,19 +4,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('site_settings', '0006_companysize_priority'),
+        ("site_settings", "0006_companysize_priority"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='country',
-            options={'ordering': ['priority'], 'verbose_name_plural': 'Countries'},
+            name="country",
+            options={"ordering": ["priority"], "verbose_name_plural": "Countries"},
         ),
         migrations.AddField(
-            model_name='country',
-            name='priority',
+            model_name="country",
+            name="priority",
             field=models.IntegerField(default=10),
         ),
     ]

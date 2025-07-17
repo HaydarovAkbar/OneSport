@@ -85,7 +85,9 @@ class ClientUserProfile(CoreModel):
     phone = models.CharField(max_length=255, null=True, blank=True)
     user_type = models.SmallIntegerField(choices=UserType.choices, default=UserType.MEMBER)
     client = models.ForeignKey("clients.Client", on_delete=models.CASCADE)
-    profile_photo = models.ImageField(upload_to=get_client_profile_photo_path, validators=[validate_image_size], max_length=255)
+    profile_photo = models.ImageField(
+        upload_to=get_client_profile_photo_path, validators=[validate_image_size], max_length=255
+    )
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

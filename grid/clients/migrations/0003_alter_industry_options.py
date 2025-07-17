@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('clients', '0002_remove_client_addresses_address'),
+        ("clients", "0002_remove_client_addresses_address"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='industry',
-            options={'ordering': ['name'], 'verbose_name_plural': 'Industries'},
+            name="industry",
+            options={"ordering": ["name"], "verbose_name_plural": "Industries"},
         ),
     ]

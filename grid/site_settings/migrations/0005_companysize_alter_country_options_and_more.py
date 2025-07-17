@@ -5,31 +5,30 @@ import uuid
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('site_settings', '0004_delete_address'),
+        ("site_settings", "0004_delete_address"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='CompanySize',
+            name="CompanySize",
             fields=[
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('created_at', models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='created')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='updated')),
-                ('is_active', models.BooleanField(db_index=True, default=True)),
-                ('name', models.CharField(max_length=255)),
+                ("uuid", models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ("created_at", models.DateTimeField(auto_now_add=True, db_index=True, verbose_name="created")),
+                ("updated_at", models.DateTimeField(auto_now=True, verbose_name="updated")),
+                ("is_active", models.BooleanField(db_index=True, default=True)),
+                ("name", models.CharField(max_length=255)),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.AlterModelOptions(
-            name='country',
-            options={'ordering': ['name'], 'verbose_name_plural': 'Countries'},
+            name="country",
+            options={"ordering": ["name"], "verbose_name_plural": "Countries"},
         ),
         migrations.AlterModelOptions(
-            name='currency',
-            options={'ordering': ['name'], 'verbose_name_plural': 'Currencies'},
+            name="currency",
+            options={"ordering": ["name"], "verbose_name_plural": "Currencies"},
         ),
     ]

@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 
 from django.db import models
@@ -58,9 +58,10 @@ class RecruiterPayment(CoreModel):
 
 
 def generate_unique_code():
-    length = 8  # Set the length of the code
+    """Generate cryptographically secure unique code for invoices."""
+    length = 8
     chars = string.ascii_uppercase + string.digits
-    return "".join(random.choice(chars) for _ in range(length))
+    return "".join(secrets.choice(chars) for _ in range(length))  # Use secrets instead of random
 
 
 class Invoice(CoreModel):
@@ -81,7 +82,7 @@ class Invoice(CoreModel):
     description = models.TextField(default="Commission for successful hiring of an employee")
     quantity = models.PositiveIntegerField(default=1)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
-    tax_name = models.CharField(max_length=100, default="GST/HST/VAT")  # Name of the tax (e.g., VAT, GST)
+    tax_name = models.CharField(max_length=100, default="GST/HST/VAT")
     tax_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
     status = models.SmallIntegerField(choices=InvoiceStatus.choices, default=InvoiceStatus.DUE)
 
@@ -103,7 +104,7 @@ class Invoice(CoreModel):
     @property
     def overdue(self):
         """Checks if the invoice is overdue."""
-        return self.status == InvoiceStatus.DUE and self.due_date < now()
+        return self.status == self.InvoiceStatus.DUE and self.due_date < now()
 
     def save(self, *args, **kwargs):
         if not self.invoice_code:
@@ -117,4 +118,4 @@ class Invoice(CoreModel):
         return generate_unique_code()
 
     def __str__(self):
-        return f"Invoice {self.invoice_id} for {self.client.name}"
+        return f"Invoice {self.invoice_code} for {self.client.company_name}"

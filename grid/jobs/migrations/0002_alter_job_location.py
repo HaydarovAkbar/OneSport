@@ -5,16 +5,17 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('clients', '0002_remove_client_addresses_address'),
-        ('jobs', '0001_initial'),
+        ("clients", "0002_remove_client_addresses_address"),
+        ("jobs", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='job',
-            name='location',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='clients.address'),
+            model_name="job",
+            name="location",
+            field=models.ForeignKey(
+                blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to="clients.address"
+            ),
         ),
     ]

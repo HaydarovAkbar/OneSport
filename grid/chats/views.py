@@ -1,31 +1,21 @@
-from rest_framework import viewsets, permissions, status, generics
-from rest_framework.response import Response
-from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
-
-from drf_yasg.utils import swagger_auto_schema
-from drf_yasg import openapi
-
-from django_filters.rest_framework import DjangoFilterBackend
-
 from asgiref.sync import async_to_sync, sync_to_async
 from channels.layers import get_channel_layer
+from django_filters.rest_framework import DjangoFilterBackend
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import generics, permissions, status, viewsets
+from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
+from rest_framework.response import Response
 
-from .models import (
-    ChatRoom, 
-    Message
-)
-
+from .filters import ChatRoomFilter, MessageFilter
+from .models import ChatRoom, Message
 from .serializers import (
-    ChatRoomSerializer, 
-    MessageSerializer,
+    ChatRoomSerializer,
     MessageCreateSerializer,
+    MessageSerializer,
     MessageUpdateSerializer,
 )
 
-from .filters import (
-    ChatRoomFilter, 
-    MessageFilter,
-)
 
 async def notify_participants(message, event_type):
     """
@@ -34,13 +24,12 @@ async def notify_participants(message, event_type):
     channel_layer = get_channel_layer()
 
     if channel_layer:
-
         await channel_layer.group_send(
             f"chat_{str(message['chat_room'])}",
             {
                 "type": event_type,
-                "message": message, 
-            }
+                "message": message,
+            },
         )
 
 
@@ -48,16 +37,19 @@ class ChatRoomListView(generics.ListAPIView):
     """
     Handles listing chat rooms.
     """
+
     queryset = ChatRoom.objects.all()
     serializer_class = ChatRoomSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_class=ChatRoomFilter
+    filterset_class = ChatRoomFilter
     permission_classes = [permissions.IsAuthenticated]
+
 
 class ChatRoomCreateView(generics.CreateAPIView):
     """
     Handles reating chat rooms.
     """
+
     queryset = ChatRoom.objects.all()
     serializer_class = ChatRoomSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -67,25 +59,26 @@ class ChatRoomDetailView(generics.RetrieveUpdateDestroyAPIView):
     """
     Handles retrieving, updating, and deleting a chat room.
     """
+
     queryset = ChatRoom.objects.all()
     serializer_class = ChatRoomSerializer
     permission_classes = [permissions.IsAuthenticated]
-    lookup_field='uuid'
+    lookup_field = "uuid"
 
 
 class MessageCreateView(generics.CreateAPIView):
     """
     Handles creating messages in a chat room.
     """
+
     queryset = Message.objects.all()
     serializer_class = MessageCreateSerializer
     permission_classes = [permissions.IsAuthenticated]
     parser_classes = [MultiPartParser, FormParser]
 
-
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
-    
+
     def perform_create(self, serializer):
         # Save the message and set sender to the authenticated user
         message_created = serializer.save(sender=self.request.user)
@@ -101,7 +94,7 @@ class MessageCreateView(generics.CreateAPIView):
             "timestamp": message_created.timestamp.isoformat(),
             "is_edited": message_created.is_edited,
             "is_viewed": message_created.is_viewed,
-            "read_by": list(message_created.read_by.values_list('uuid', flat=True)),  # Serialize read_by as a list
+            "read_by": list(message_created.read_by.values_list("uuid", flat=True)),  # Serialize read_by as a list
         }
 
         async_to_sync(notify_participants)(message, "message_created")
@@ -111,10 +104,11 @@ class MessageListView(generics.ListAPIView):
     """
     Handles listing  messages in a chat room.
     """
-    queryset=Message.objects.all()
+
+    queryset = Message.objects.all()
     serializer_class = MessageSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_class=MessageFilter
+    filterset_class = MessageFilter
     permission_classes = [permissions.IsAuthenticated]
 
     def list(self, request, *args, **kwargs):
@@ -132,16 +126,18 @@ class MessageListView(generics.ListAPIView):
 
         # Serialize the updated queryset
         serializer = self.get_serializer(queryset, many=True)
-        
+
         return Response(serializer.data)
-    
+
+
 class MessageDetailView(generics.RetrieveUpdateAPIView):
     """
     Handles retrieving, updating, and deleting messages.
     """
-    queryset=Message.objects.all()
+
+    queryset = Message.objects.all()
     serializer_class = MessageUpdateSerializer
-    lookup_field='uuid'
+    lookup_field = "uuid"
     permission_classes = [permissions.IsAuthenticated]
 
     def update(self, request, *args, **kwargs):
@@ -152,11 +148,11 @@ class MessageDetailView(generics.RetrieveUpdateAPIView):
         serializer.save()
         message = {
             "uuid": str(message_updated.uuid),
-            "sender": str(message_updated.sender.uuid), 
+            "sender": str(message_updated.sender.uuid),
             "chat_room": str(message_updated.chat_room.uuid),
             "file": message_updated.file.url if message_updated.file else None,
-            "content": message_updated.content if message_updated.content else None, 
-            "job": str(message_created.job.uuid) if message_updated.job else None,  
+            "content": message_updated.content if message_updated.content else None,
+            "job": str(message_created.job.uuid) if message_updated.job else None,
             "timestamp": message_updated.timestamp.isoformat(),
             "is_edited": message_updated.is_edited,
             "is_viewed": message_updated.is_viewed,
@@ -165,26 +161,28 @@ class MessageDetailView(generics.RetrieveUpdateAPIView):
         async_to_sync(notify_participants)(message, "message_updated")
         return Response(serializer.data)
 
+
 class MessageDestroyView(generics.DestroyAPIView):
     """
     Handles retrieving, updating, and deleting messages.
     """
-    queryset=Message.objects.all()
+
+    queryset = Message.objects.all()
     serializer_class = MessageSerializer
-    lookup_field='uuid'
+    lookup_field = "uuid"
     permission_classes = [permissions.IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
-        message_deleted= self.get_object()
+        message_deleted = self.get_object()
         if self.request.user.uuid != message_deleted.sender.uuid:
             return Response({"detail": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
         message = {
             "uuid": str(message_deleted.uuid),
-            "sender": str(message_deleted.sender.uuid), 
+            "sender": str(message_deleted.sender.uuid),
             "chat_room": str(message_deleted.chat_room.uuid),
             "file": message_deleted.file.url if message_deleted.file else None,
-            "content": message_deleted.content if message_deleted.content else None, 
-            "job": str(message_deleted.job.uuid) if message_deleted.job else None,  
+            "content": message_deleted.content if message_deleted.content else None,
+            "job": str(message_deleted.job.uuid) if message_deleted.job else None,
             "timestamp": message_deleted.timestamp.isoformat(),
             "is_edited": message_deleted.is_edited,
             "is_viewed": message_deleted.is_viewed,
@@ -195,6 +193,3 @@ class MessageDestroyView(generics.DestroyAPIView):
         if message_deleted.delete():
             async_to_sync(notify_participants)(message, "message_deleted")
         return Response({"detail": "Message deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
-
-
-

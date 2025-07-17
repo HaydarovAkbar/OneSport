@@ -1,8 +1,7 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
-from .views import JobAttachmentUploadView, \
-    JobAttachmentDeleteView, JobViewSet
+from .views import JobAttachmentDeleteView, JobAttachmentUploadView, JobViewSet
 
 
 router = DefaultRouter()

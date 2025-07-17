@@ -1,68 +1,66 @@
-exclude: |
-    (?x)(
-        ^pyproject.toml|
-        ^.*/migrations/.*|
-        ^.*/static/.*|
-        ^.*/templates/.*
-    )
-default_stages: [commit]
-
-default_language_version:
-  python: python3.9
-
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
-      - id: check-json
-      - id: check-toml
-      - id: check-xml
       - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
       - id: debug-statements
-      - id: check-builtin-literals
-      - id: check-case-conflict
       - id: check-docstring-first
-      - id: detect-private-key
-
-  - repo: https://github.com/adamchainz/django-upgrade
-    rev: '1.15.0'
-    hooks:
-      - id: django-upgrade
-        args: ['--target-version', '4.2']
-
-  - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
-    hooks:
-      - id: pyupgrade
-        args: [--py311-plus]
 
   - repo: https://github.com/psf/black
     rev: 23.12.0
     hooks:
       - id: black
+        language_version: python3.11
 
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
     hooks:
       - id: isort
+        args: ["--profile", "black"]
 
-  # - repo: https://github.com/PyCQA/flake8
-  #   rev: 6.1.0
-  #   hooks:
-  #   - id: flake8
-  #     args: ['--ignore=F401']  # Ensures unused imports are ignored
-
-
-  - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.34.0
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
     hooks:
-      - id: djlint-reformat-django
-      - id: djlint-django
+      - id: flake8
+        additional_dependencies: [flake8-isort]
+        args: ['--max-line-length=88', '--extend-ignore=E203']
 
-# sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
-ci:
-  autoupdate_schedule: weekly
-  skip: []
-  submodules: false
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: ['-iii', '-ll', '-s=B101,B601']
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+        additional_dependencies: [django-stubs, djangorestframework-stubs]
+        args: [--ignore-missing-imports]
+
+  # djlint temporary disabled due to regex dependency issue with Python 3.13
+  # - repo: https://github.com/Riverside-Healthcare/djLint
+  #   rev: v1.34.0
+  #   hooks:
+  #     - id: djlint-reformat-django
+  #     - id: djlint-django
+
+  - repo: local
+    hooks:
+      - id: django-check
+        name: Django Check
+        entry: python manage.py check
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: django-test
+        name: Django Test
+        entry: python manage.py test --keepdb --failfast
+        language: system
+        pass_filenames: false
+        stages: [push]

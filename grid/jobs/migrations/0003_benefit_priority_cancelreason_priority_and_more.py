@@ -4,30 +4,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('jobs', '0002_alter_job_location'),
+        ("jobs", "0002_alter_job_location"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='benefit',
-            name='priority',
+            model_name="benefit",
+            name="priority",
             field=models.IntegerField(default=10),
         ),
         migrations.AddField(
-            model_name='cancelreason',
-            name='priority',
+            model_name="cancelreason",
+            name="priority",
             field=models.IntegerField(default=10),
         ),
         migrations.AddField(
-            model_name='language',
-            name='priority',
+            model_name="language",
+            name="priority",
             field=models.IntegerField(default=10),
         ),
         migrations.AddField(
-            model_name='stage',
-            name='priority',
+            model_name="stage",
+            name="priority",
             field=models.IntegerField(default=10),
         ),
     ]

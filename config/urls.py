@@ -24,15 +24,17 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
+from grid.core.health import health_check
+
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="HireGrid API",
+        title="OneSport API",
         default_version="v1",
-        description="API documentation for HireGrid",
-        terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@hiregrid.local"),
-        license=openapi.License(name="BSD License"),
+        description="API documentation for OneSport HR/Recruiting Platform",
+        terms_of_service="https://www.onesport.com/terms/",
+        contact=openapi.Contact(email="api-support@onesport.com"),
+        license=openapi.License(name="MIT License"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
@@ -40,17 +42,20 @@ schema_view = get_schema_view(
 
 
 def home(request):
-    return HttpResponse("Hello, Django!")
+    return HttpResponse("OneSport API - Welcome!")
 
 
 urlpatterns = [
-    # YOUR PATTERNS
-
+    # Core URLs
     path("admin/", admin.site.urls),
-    path("health/", home, name="home"),
+    path("", home, name="home"),
+    path("health/", health_check, name="health-check"),
+    # API Documentation
     path("swagger<format>/", schema_view.without_ui(cache_timeout=0), name="schema-json"),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("docs/", schema_view.with_ui("swagger", cache_timeout=0), name="api-docs"),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
+    # API URLs
     path("api/auth/", include("grid.users.urls"), name="user-auth"),
     path("api/clients/", include("grid.clients.urls"), name="clients"),
     path("api/recruiters/", include("grid.recruiters.urls"), name="recruiters"),

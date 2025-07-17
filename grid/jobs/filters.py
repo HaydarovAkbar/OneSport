@@ -1,4 +1,5 @@
 import django_filters
+
 from django.db.models import Q
 
 from grid.jobs.models import Job
@@ -68,18 +69,28 @@ class JobFilter(django_filters.FilterSet):
     class Meta:
         model = Job
         fields = [
-            "search", "min_salary", "max_salary", "commission_percentage", "visa_sponsorship", "job_type",
-            "position_type", "status", "client_company_name", "location_city", "location_state", "location_country"
+            "search",
+            "min_salary",
+            "max_salary",
+            "commission_percentage",
+            "visa_sponsorship",
+            "job_type",
+            "position_type",
+            "status",
+            "client_company_name",
+            "location_city",
+            "location_state",
+            "location_country",
         ]
 
     def filter_keyword(self, queryset, name, value):
         # Search across multiple text fields
         return queryset.filter(
-            Q(title__icontains=value) |
-            Q(description__icontains=value) |
-            Q(about_company__icontains=value) |
-            Q(must_haves__icontains=value) |
-            Q(nice_to_haves__icontains=value)
+            Q(title__icontains=value)
+            | Q(description__icontains=value)
+            | Q(about_company__icontains=value)
+            | Q(must_haves__icontains=value)
+            | Q(nice_to_haves__icontains=value)
         )
 
     def filter_by_client_company_name(self, queryset, name, value):

@@ -3,8 +3,12 @@ from drf_yasg.utils import swagger_auto_schema
 from rest_framework.filters import OrderingFilter
 from rest_framework.generics import ListAPIView
 
-from grid.site_settings.models import Country, State, CompanySize
-from grid.site_settings.serializers import CountrySerializer, StateSerializer, CompanySizeSerializer
+from grid.site_settings.models import CompanySize, Country, State
+from grid.site_settings.serializers import (
+    CompanySizeSerializer,
+    CountrySerializer,
+    StateSerializer,
+)
 
 
 class CountryListView(ListAPIView):
@@ -98,4 +102,3 @@ class CompanySizeListView(ListAPIView):
     )
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
-

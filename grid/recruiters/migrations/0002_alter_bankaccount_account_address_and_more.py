@@ -5,26 +5,39 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('clients', '0002_remove_client_addresses_address'),
-        ('recruiters', '0001_initial'),
+        ("clients", "0002_remove_client_addresses_address"),
+        ("recruiters", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='bankaccount',
-            name='account_address',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='account_addresses', to='clients.address'),
+            model_name="bankaccount",
+            name="account_address",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="account_addresses",
+                to="clients.address",
+            ),
         ),
         migrations.AlterField(
-            model_name='bankaccount',
-            name='bank_address',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='bank_accounts', to='clients.address'),
+            model_name="bankaccount",
+            name="bank_address",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="bank_accounts",
+                to="clients.address",
+            ),
         ),
         migrations.AlterField(
-            model_name='recruiter',
-            name='address',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='clients.address'),
+            model_name="recruiter",
+            name="address",
+            field=models.ForeignKey(
+                blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to="clients.address"
+            ),
         ),
     ]

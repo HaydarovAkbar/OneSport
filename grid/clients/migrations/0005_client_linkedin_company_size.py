@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('clients', '0004_industry_priority'),
+        ("clients", "0004_industry_priority"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='client',
-            name='linkedin_company_size',
+            model_name="client",
+            name="linkedin_company_size",
             field=models.IntegerField(blank=True, max_length=10, null=True),
         ),
     ]

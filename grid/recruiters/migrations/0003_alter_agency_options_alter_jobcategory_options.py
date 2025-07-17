@@ -4,18 +4,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('recruiters', '0002_alter_bankaccount_account_address_and_more'),
+        ("recruiters", "0002_alter_bankaccount_account_address_and_more"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='agency',
-            options={'ordering': ['agency_name'], 'verbose_name_plural': 'Agencies'},
+            name="agency",
+            options={"ordering": ["agency_name"], "verbose_name_plural": "Agencies"},
         ),
         migrations.AlterModelOptions(
-            name='jobcategory',
-            options={'ordering': ['name'], 'verbose_name_plural': 'Job Categories'},
+            name="jobcategory",
+            options={"ordering": ["name"], "verbose_name_plural": "Job Categories"},
         ),
     ]

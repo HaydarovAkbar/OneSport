@@ -1,6 +1,6 @@
 import requests
 
-from django.conf import settings  # Import settings to access the API key
+from django.conf import settings
 
 
 def get_person_data(linkedin_url):
@@ -8,7 +8,7 @@ def get_person_data(linkedin_url):
     headers = {"Authorization": f"Bearer {settings.PROXYCURL_API_KEY}"}
     params = {"linkedin_profile_url": linkedin_url}
 
-    response = requests.get(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params, timeout=30)  # Add timeout
 
     if response.status_code == 200:
         return response.json()
@@ -23,7 +23,7 @@ def get_company_data(linkedin_url):
         "url": linkedin_url,
     }
 
-    response = requests.get(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params, timeout=30)  # Add timeout
 
     if response.status_code == 200:
         return response.json()

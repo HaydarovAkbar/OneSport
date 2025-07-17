@@ -7,38 +7,50 @@ import uuid
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('site_settings', '0003_alter_commissionlevel_options_delete_profileimage'),
-        ('clients', '0001_initial'),
+        ("site_settings", "0003_alter_commissionlevel_options_delete_profileimage"),
+        ("clients", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='client',
-            name='addresses',
+            model_name="client",
+            name="addresses",
         ),
         migrations.CreateModel(
-            name='Address',
+            name="Address",
             fields=[
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('created_at', models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='created')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='updated')),
-                ('is_active', models.BooleanField(db_index=True, default=True)),
-                ('address1', models.CharField(max_length=255)),
-                ('address2', models.CharField(blank=True, max_length=255, null=True)),
-                ('city', models.CharField(max_length=255)),
-                ('zip_code', models.CharField(blank=True, max_length=20, null=True)),
-                ('latitude', models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
-                ('longitude', models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
-                ('by_user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='addresses', to='clients.client')),
-                ('country', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='site_settings.country')),
-                ('state', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='site_settings.state')),
+                ("uuid", models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ("created_at", models.DateTimeField(auto_now_add=True, db_index=True, verbose_name="created")),
+                ("updated_at", models.DateTimeField(auto_now=True, verbose_name="updated")),
+                ("is_active", models.BooleanField(db_index=True, default=True)),
+                ("address1", models.CharField(max_length=255)),
+                ("address2", models.CharField(blank=True, max_length=255, null=True)),
+                ("city", models.CharField(max_length=255)),
+                ("zip_code", models.CharField(blank=True, max_length=20, null=True)),
+                ("latitude", models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
+                ("longitude", models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
+                (
+                    "by_user",
+                    models.ForeignKey(
+                        blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL
+                    ),
+                ),
+                (
+                    "client",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, related_name="addresses", to="clients.client"
+                    ),
+                ),
+                (
+                    "country",
+                    models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to="site_settings.country"),
+                ),
+                ("state", models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to="site_settings.state")),
             ],
             options={
-                'ordering': ['city'],
+                "ordering": ["city"],
             },
         ),
     ]

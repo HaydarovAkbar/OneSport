@@ -4,16 +4,15 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('jobs', '0002_alter_job_location'),
-        ('clients', '0002_remove_client_addresses_address'),
-        ('recruiters', '0002_alter_bankaccount_account_address_and_more'),
-        ('site_settings', '0003_alter_commissionlevel_options_delete_profileimage'),
+        ("jobs", "0002_alter_job_location"),
+        ("clients", "0002_remove_client_addresses_address"),
+        ("recruiters", "0002_alter_bankaccount_account_address_and_more"),
+        ("site_settings", "0003_alter_commissionlevel_options_delete_profileimage"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='Address',
+            name="Address",
         ),
     ]

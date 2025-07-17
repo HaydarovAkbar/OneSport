@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import ProxycurlPersonView, ProxycurlCompanyView
+
+from .views import ProxycurlCompanyView, ProxycurlPersonView
+
 
 urlpatterns = [
     path("proxycurl/person/", ProxycurlPersonView.as_view(), name="proxycurl-person"),

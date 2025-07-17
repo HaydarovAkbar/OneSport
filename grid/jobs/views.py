@@ -6,14 +6,18 @@ from rest_framework.generics import CreateAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .filters import JobFilter
-from .models import Job, JobAttachment, InterviewStep
-from .serializers import (
-    CreateJobSerializer, JobAttachmentSerializer, JobAttachmentDeleteSerializer, JobListSerializer, JobDetailSerializer,
-    JobUpdateSerializer,
-)
 from ..core.pagination import CustomPagination
 from ..core.permissions import IsClient
+from .filters import JobFilter
+from .models import InterviewStep, Job, JobAttachment
+from .serializers import (
+    CreateJobSerializer,
+    JobAttachmentDeleteSerializer,
+    JobAttachmentSerializer,
+    JobDetailSerializer,
+    JobListSerializer,
+    JobUpdateSerializer,
+)
 
 
 class JobAttachmentUploadView(CreateAPIView):
@@ -31,7 +35,7 @@ class JobAttachmentDeleteView(DestroyAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = JobAttachmentDeleteSerializer
     queryset = JobAttachment.objects.all()
-    lookup_field = 'uuid'
+    lookup_field = "uuid"
 
     def delete(self, request, args, *kwargs):
         try:
@@ -47,16 +51,16 @@ class JobViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_class = JobFilter
     pagination_class = CustomPagination
-    http_method_names = ['get', 'post', 'put']
+    http_method_names = ["get", "post", "put"]
 
     def get_serializer_class(self):
-        if self.action == 'create':
+        if self.action == "create":
             return CreateJobSerializer
-        elif self.action == 'list':
+        elif self.action == "list":
             return JobListSerializer
-        elif self.action == 'retrieve':
+        elif self.action == "retrieve":
             return JobDetailSerializer
-        elif self.action == 'update':
+        elif self.action == "update":
             return JobUpdateSerializer
         return JobListSerializer
 
@@ -68,16 +72,15 @@ class JobViewSet(viewsets.ModelViewSet):
             return queryset
 
         elif user.is_recruiter:
-            if hasattr(user, 'recruiter'):
+            if hasattr(user, "recruiter"):
                 recruiter = user.recruiter
                 queryset = queryset.filter(
-                    (Q(location__state=recruiter.address.state) |
-                     Q(location__country=recruiter.address.country)),
-                    applications__recruiter=recruiter
+                    (Q(location__state=recruiter.address.state) | Q(location__country=recruiter.address.country)),
+                    applications__recruiter=recruiter,
                 ).distinct()
 
         elif user.is_client:
-            if hasattr(user, 'clientuserprofile'):
+            if hasattr(user, "clientuserprofile"):
                 return queryset.filter(client=user.clientuserprofile.client)
             else:
                 raise PermissionDenied("Client profile not found for the user.")
@@ -105,7 +108,7 @@ class JobViewSet(viewsets.ModelViewSet):
 
         new_benefits = data.get("benefits", [])
         if new_benefits:
-            existing_benefits = set(job.benefits.values_list('uuid', flat=True))
+            existing_benefits = set(job.benefits.values_list("uuid", flat=True))
             benefits_to_add = [benefit_uuid for benefit_uuid in new_benefits if benefit_uuid not in existing_benefits]
             job.benefits.add(*benefits_to_add)
 

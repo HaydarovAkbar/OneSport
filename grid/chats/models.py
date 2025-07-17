@@ -1,30 +1,31 @@
-from django.db import models
-from django.contrib.auth import get_user_model
 from django.apps import apps
+from django.contrib.auth import get_user_model
+from django.db import models
 
 from ..core.models import CoreModel
 
-User=get_user_model()
+
+User = get_user_model()
 
 
 class ChatRoom(CoreModel):
-    recruiter=models.ForeignKey("recruiters.Recruiter", on_delete=models.CASCADE, related_name="chat_room")
-    clients=models.ManyToManyField("clients.Client",related_name="chat_room")
-    
+    recruiter = models.ForeignKey("recruiters.Recruiter", on_delete=models.CASCADE, related_name="chat_room")
+    clients = models.ManyToManyField("clients.Client", related_name="chat_room")
+
     def __str__(self):
         return str(self.uuid)
 
 
 class Message(CoreModel):
     chat_room = models.ForeignKey(ChatRoom, on_delete=models.CASCADE, related_name="messages")
-    sender = models.ForeignKey(to=User ,on_delete=models.CASCADE, related_name="messages", null=True, blank=True)
+    sender = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="messages", null=True, blank=True)
     content = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to="chat_files/", blank=True, null=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_edited = models.BooleanField(default=False)
-    is_viewed=models.BooleanField(default=False)
-    read_by = models.ManyToManyField(User, related_name='read_messages', blank=True)
-    job=models.ForeignKey(to="jobs.Job", on_delete=models.CASCADE, null=True, blank=True)
+    is_viewed = models.BooleanField(default=False)
+    read_by = models.ManyToManyField(User, related_name="read_messages", blank=True)
+    job = models.ForeignKey(to="jobs.Job", on_delete=models.CASCADE, null=True, blank=True)
 
     def is_read_by(self, user):
         return user in self.read_by.all()
@@ -34,8 +35,6 @@ class Message(CoreModel):
 
     def __str__(self):
         return f"Message from {self.sender} in {self.chat_room.name}"
-
-
 
 
 # class Message(CoreModel):
