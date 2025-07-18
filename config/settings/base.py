@@ -15,7 +15,6 @@ from pathlib import Path
 
 from decouple import Csv, config
 
-
 # Set the project base directory
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 APPS_DIR = BASE_DIR / "grid"
